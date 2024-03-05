@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement1 : MonoBehaviour
 {
+    public static PlayerMovement1 instance;
+
     public float originalSpeed = 10f;
     private float speed;
     public float jumpHeight = 2.0f;
@@ -12,6 +14,13 @@ public class PlayerMovement1 : MonoBehaviour
     private bool freezing;
     private float decreaseTimer;
     private bool decreasing;
+
+    private float analyticsTimer = 0f;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
@@ -29,6 +38,18 @@ public class PlayerMovement1 : MonoBehaviour
 
     void Update()
     {
+        // create analytics files every 30 seconds
+        if (analyticsTimer < 30.0f)
+        {
+            analyticsTimer += Time.deltaTime;
+
+            if (analyticsTimer >= 30.0f)
+            {
+                analyticsTimer = 0f;
+                AnalyticsManager.instance.WriteMetricsToFile();
+            }
+        }
+
         Vector3 movement = Vector3.zero;
 
         // forward

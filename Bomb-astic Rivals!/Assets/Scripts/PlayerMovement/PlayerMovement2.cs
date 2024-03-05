@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement2 : MonoBehaviour
 {
+    public static PlayerMovement2 instance;
+
     public float originalSpeed = 10f;
     private float speed;
     public float jumpHeight = 2.0f;
@@ -12,6 +14,11 @@ public class PlayerMovement2 : MonoBehaviour
     private bool freezing;
     private float decreaseTimer;
     private bool decreasing;
+
+    void Awake()
+    {
+        instance = this;
+    }
 
     void Start()
     {
