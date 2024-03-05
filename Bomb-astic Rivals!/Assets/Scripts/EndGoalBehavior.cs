@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndGoalBehavior : MonoBehaviour
 {
-    public Canvas endGameCanvas;
+    public GameObject endGameCanvas;
 
     void OnTriggerEnter(Collider other)
     {
@@ -18,7 +18,7 @@ public class EndGoalBehavior : MonoBehaviour
             if(endGameCanvas)
             {
                 // display end game canvas
-                endGameCanvas.enabled = true;
+                endGameCanvas.SetActive(true);
             }
         }
     }
