@@ -7,9 +7,22 @@ public class PlayerMovement1 : MonoBehaviour
     public float rotationSpeed = 180f;
     private Rigidbody rb;
 
+    //added by Rhea for freeze and reduce speed mechanic
+    private float freezeTimer;
+    private bool freezing;
+    private float decreaseTimer;
+    private bool decreasing;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+
+        //added by Rhea
+        freezeTimer = 0;
+        freezing = false;
+
+        decreaseTimer = 0;
+        decreasing = false;
     }
 
     void Update()
@@ -50,6 +63,45 @@ public class PlayerMovement1 : MonoBehaviour
 
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(0, horizontalInput * rotationSpeed * Time.deltaTime, 0);
+
+        //added by Rhea
+        if (freezing)
+        {
+            freezeTimer += Time.deltaTime;
+            if (freezeTimer >= 5)
+            {
+                speed = 5.0f;
+                freezeTimer = 0;
+                freezing = false;
+            }
+        }
+
+        if (decreasing)
+        {
+            decreaseTimer += Time.deltaTime;
+            if (decreaseTimer >= 5)
+            {
+                speed = 5.0f;
+                decreaseTimer = 0;
+                decreasing = false;
+            }
+        }
+    }
+
+    //added by Rhea
+    private void OnTriggerEnter(Collider collison)
+    {
+        if (collison.CompareTag("freeze"))
+        {
+            freezing = true;
+            speed = 0.0f;
+        }
+
+        if (collison.CompareTag("reducespeed"))
+        {
+            decreasing = true;
+            speed = 2.0f;
+        }
     }
 }
 
