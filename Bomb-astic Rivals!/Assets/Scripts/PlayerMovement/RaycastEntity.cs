@@ -12,7 +12,7 @@ public class RaycastEntity : MonoBehaviour
     void Update()
     {
         Vector3 forward = transform.forward;
-        Vector3 portPos= transform.position + offset; ;
+        Vector3 portPos= transform.position + offset;
         RaycastHit hit;
         if (Physics.Raycast(portPos, forward, out hit, raycastDistance))
         {
@@ -30,7 +30,7 @@ public class RaycastEntity : MonoBehaviour
 
     public Transform GetCurrentObject()
     {
-        return currentObject; ;
+        return currentObject;
     }
 
 
