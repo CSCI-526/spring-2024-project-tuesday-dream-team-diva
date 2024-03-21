@@ -17,9 +17,18 @@ public class RaycastEntity2 : MonoBehaviour
         if (Physics.Raycast(portPos, forward, out hit, raycastDistance))
         {
             Debug.DrawRay(portPos, forward * hit.distance, Color.green);
-
-            Debug.Log("debug: " + hit.collider.gameObject.name);
-            currentObject = hit.transform;
+            //fixed
+            if (hit.collider.CompareTag("Player"))
+            {
+                Debug.Log("Hit a player, ignoring...");
+                currentObject = null;
+            }
+            else
+            {
+                Debug.Log("debug: " + hit.collider.gameObject.name);
+                currentObject = hit.transform;
+            }
+            
         }
         else
         {

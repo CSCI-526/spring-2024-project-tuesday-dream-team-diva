@@ -24,6 +24,10 @@ public class GraspingSystem : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.E))
         {
+            if (isHolding)
+            {
+                return;
+            }
             currentObject = raycastEntity.GetCurrentObject();
             if (currentObject != null && !isHolding)
             {
@@ -51,6 +55,11 @@ public class GraspingSystem : MonoBehaviour
                 isHolding = false;
             }
 
+        }
+        //fixed
+        if (isHolding)
+        {
+            currentObject.position = holdPos.position;
         }
     }
 }
