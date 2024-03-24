@@ -4,22 +4,24 @@ using UnityEngine;
 
 public class EndGoalBehavior : MonoBehaviour
 {
-    public GameObject endGameCanvas;
+    public GameObject endGameCanvas1;
+    
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("endline"))
         {
             Debug.Log("Player reached the end goal!");
             
             // stop time
-            Time.timeScale = 0;
+            
 
-            if(endGameCanvas)
+            if(endGameCanvas1)
             {
                 // display end game canvas
-                endGameCanvas.SetActive(true);
+                endGameCanvas1.SetActive(true);
             }
         }
+        
     }
 }

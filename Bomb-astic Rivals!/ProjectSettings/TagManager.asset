@@ -8,6 +8,10 @@ TagManager:
   - freeze
   - reducespeed
   - hide tile
+  - player1
+  - player2
+  - endline
+  - fallDetector
   layers:
   - Default
   - TransparentFX
