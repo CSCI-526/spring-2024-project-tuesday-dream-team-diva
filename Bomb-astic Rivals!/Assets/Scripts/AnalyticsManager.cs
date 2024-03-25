@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using Unity.Services.Analytics;
+using Unity.Services.Core;
+using Unity.Services.Core.Analytics;
 
 public class AnalyticsManager : MonoBehaviour
 {
@@ -15,6 +18,12 @@ public class AnalyticsManager : MonoBehaviour
     void Awake()
     {
         instance = this;
+    }
+
+    async void Start()
+    {
+        await UnityServices.InitializeAsync();
+        AnalyticsService.Instance.StartDataCollection();
     }
 
     void Update()
@@ -60,41 +69,41 @@ public class AnalyticsManager : MonoBehaviour
     //    }
     //}
 
-    private string ConvertMetricsToStringRepresentation()
-    {
-        string metrics = "Total Time in Tile Area (seconds): " + timeInTileArea.ToString() + "\n";
-        return metrics;
-    }
+    //private string ConvertMetricsToStringRepresentation()
+    //{
+    //    string metrics = "Total Time in Tile Area (seconds): " + timeInTileArea.ToString() + "\n";
+    //    return metrics;
+    //}
 
     // Uses the current date/time on this computer to create a uniquely named file,
     // preventing files from colliding and overwriting data.
-    private string CreateUniqueFileName()
-    {
-        string dateTime = System.DateTime.Now.ToString();
-        dateTime = dateTime.Replace("/", "_");
-        dateTime = dateTime.Replace(":", "_");
-        dateTime = dateTime.Replace(" ", "___");
-        return "BombasticRivals_Analytics_" + dateTime + ".txt";
-    }
+    //private string CreateUniqueFileName()
+    //{
+    //    string dateTime = System.DateTime.Now.ToString();
+    //    dateTime = dateTime.Replace("/", "_");
+    //    dateTime = dateTime.Replace(":", "_");
+    //    dateTime = dateTime.Replace(" ", "___");
+    //    return "BombasticRivals_Analytics_" + dateTime + ".txt";
+    //}
 
     // Generate the report that will be saved out to a file.
-    public void WriteMetricsToFile()
-    {
-        string totalReport = "Report generated on " + System.DateTime.Now + "\n\n";
-        totalReport += "Total Report:\n";
-        totalReport += ConvertMetricsToStringRepresentation();
-        totalReport = totalReport.Replace("\n", System.Environment.NewLine);
-        string reportFile = CreateUniqueFileName();
-
-        File.WriteAllText(reportFile, totalReport);
-    }
+    //public void WriteMetricsToFile()
+    //{
+    //    string totalReport = "Report generated on " + System.DateTime.Now + "\n\n";
+    //    totalReport += "Total Report:\n";
+    //    totalReport += ConvertMetricsToStringRepresentation();
+    //    totalReport = totalReport.Replace("\n", System.Environment.NewLine);
+    //    string reportFile = CreateUniqueFileName();
+    //
+    //    File.WriteAllText(reportFile, totalReport);
+    //}
 
     // The OnApplicationQuit function is a Unity-Specific function that gets
     // called right before your application actually exits. You can use this
     // to save information for the next time the game starts, or in our case
     // write the metrics out to a file.
-    private void OnApplicationQuit()
-    {
-        WriteMetricsToFile();
-    }
+    //private void OnApplicationQuit()
+    //{
+    //    WriteMetricsToFile();
+    //}
 }

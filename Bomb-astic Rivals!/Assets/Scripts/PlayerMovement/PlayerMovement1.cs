@@ -15,8 +15,6 @@ public class PlayerMovement1 : MonoBehaviour
     private float decreaseTimer;
     private bool decreasing;
 
-    private float analyticsTimer = 0f;
-
     void Awake()
     {
         instance = this;
@@ -38,17 +36,6 @@ public class PlayerMovement1 : MonoBehaviour
 
     void Update()
     {
-        // create analytics files every 30 seconds
-        if (analyticsTimer < 30.0f)
-        {
-            analyticsTimer += Time.deltaTime;
-
-            if (analyticsTimer >= 30.0f)
-            {
-                analyticsTimer = 0f;
-                AnalyticsManager.instance.WriteMetricsToFile();
-            }
-        }
 
         Vector3 movement = Vector3.zero;
 

@@ -1,36 +1,143 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/shrad/OneDrive/Documents/GitHub/spring-2024-project-tuesday-dream-team-diva/Bomb-astic
+    m_FilePath: C:/Users/Spike Fu/Desktop/CSCI 526/Bomb-astic Rivals!/Git Repo/spring-2024-project-tuesday-dream-team-diva/Bomb-astic
       Rivals!/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638468227853511286
-    m_Hash: 2150895495
+      ticks: 638469835794151756
+    m_Hash: 4088280327
   m_LockFileStatus:
-    m_FilePath: C:/Users/shrad/OneDrive/Documents/GitHub/spring-2024-project-tuesday-dream-team-diva/Bomb-astic
+    m_FilePath: C:/Users/Spike Fu/Desktop/CSCI 526/Bomb-astic Rivals!/Git Repo/spring-2024-project-tuesday-dream-team-diva/Bomb-astic
       Rivals!/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638468227853661395
-    m_Hash: 3417064785
+      ticks: 638469835794196918
+    m_Hash: 1061678591
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
   m_LocalFileStatus: []
-m_ProjectPath: C:/Users/shrad/OneDrive/Documents/GitHub/spring-2024-project-tuesday-dream-team-diva/Bomb-astic
+m_ProjectPath: C:/Users/Spike Fu/Desktop/CSCI 526/Bomb-astic Rivals!/Git Repo/spring-2024-project-tuesday-dream-team-diva/Bomb-astic
   Rivals!/Packages
 m_EditorVersion: 2022.3.16f1 (d2c21f0ef2f1)
 m_ResolvedPackages:
+- packageId: com.unity.services.analytics@5.1.0
+  testable: 0
+  isDirectDependency: 1
+  version: 5.1.0
+  source: 1
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+    Rivals!\Library\PackageCache\com.unity.services.analytics@5.1.0
+  assetPath: Packages/com.unity.services.analytics
+  name: com.unity.services.analytics
+  displayName: Analytics
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: assets
+  description: The Unity Analytics package automatically collects core events and
+    user properties when someone uses your game or application, and enables you to
+    track specific in-game actions your user performs by defining custom events.
+    The data collected from this package is surfaced in the Unity dashboard where
+    you can use it to gather user insights, segment your player base and make informed
+    decisions around the optimization of your game.
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.3
+    - 1.0.4
+    - 1.0.5
+    - 2.0.7-pre.4
+    - 2.0.7-pre.6
+    - 2.0.7-pre.7
+    - 3.0.0-pre.2
+    - 3.0.0-pre.3
+    - 3.0.0-pre.4
+    - 4.0.0-pre.2
+    - 4.0.0-pre.3
+    - 4.0.0
+    - 4.0.1
+    - 4.1.0
+    - 4.2.0
+    - 4.3.0
+    - 4.4.0
+    - 4.4.1
+    - 4.4.2
+    - 5.0.0
+    - 5.0.1
+    - 5.0.2
+    - 5.1.0
+    compatible:
+    - 5.0.0
+    - 5.0.1
+    - 5.0.2
+    - 5.1.0
+    recommended: 5.0.2
+    deprecated: []
+  dependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.services.core
+    version: 1.10.1
+  resolvedDependencies:
+  - name: com.unity.ugui
+    version: 1.0.0
+  - name: com.unity.modules.ui
+    version: 1.0.0
+  - name: com.unity.modules.imgui
+    version: 1.0.0
+  - name: com.unity.modules.jsonserialize
+    version: 1.0.0
+  - name: com.unity.services.core
+    version: 1.12.0
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 638417750380000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.analytics@5.1/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: 13f4887dfc1bf80d30ef84aff0416d2ed0ef2d3b
+    path: 
+  unityLifecycle:
+    version: 5.0.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
 - packageId: com.unity.textmeshpro@3.0.8
   testable: 0
   isDirectDependency: 1
   version: 3.0.8
   source: 1
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.textmeshpro@3.0.8
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
@@ -222,7 +329,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.ugui@1.0.0
   assetPath: Packages/com.unity.ugui
   name: com.unity.ugui
@@ -294,7 +401,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.ai@1.0.0
   assetPath: Packages/com.unity.modules.ai
   name: com.unity.modules.ai
@@ -350,7 +457,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.androidjni@1.0.0
   assetPath: Packages/com.unity.modules.androidjni
   name: com.unity.modules.androidjni
@@ -405,7 +512,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.animation@1.0.0
   assetPath: Packages/com.unity.modules.animation
   name: com.unity.modules.animation
@@ -461,7 +568,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
   assetPath: Packages/com.unity.modules.assetbundle
   name: com.unity.modules.assetbundle
@@ -517,7 +624,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.audio@1.0.0
   assetPath: Packages/com.unity.modules.audio
   name: com.unity.modules.audio
@@ -573,7 +680,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.cloth@1.0.0
   assetPath: Packages/com.unity.modules.cloth
   name: com.unity.modules.cloth
@@ -633,7 +740,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.director@1.0.0
   assetPath: Packages/com.unity.modules.director
   name: com.unity.modules.director
@@ -697,7 +804,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
   assetPath: Packages/com.unity.modules.imageconversion
   name: com.unity.modules.imageconversion
@@ -754,7 +861,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.imgui@1.0.0
   assetPath: Packages/com.unity.modules.imgui
   name: com.unity.modules.imgui
@@ -810,7 +917,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
   assetPath: Packages/com.unity.modules.jsonserialize
   name: com.unity.modules.jsonserialize
@@ -866,7 +973,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
   assetPath: Packages/com.unity.modules.particlesystem
   name: com.unity.modules.particlesystem
@@ -922,7 +1029,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.physics@1.0.0
   assetPath: Packages/com.unity.modules.physics
   name: com.unity.modules.physics
@@ -978,7 +1085,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.physics2d@1.0.0
   assetPath: Packages/com.unity.modules.physics2d
   name: com.unity.modules.physics2d
@@ -1034,7 +1141,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.screencapture@1.0.0
   assetPath: Packages/com.unity.modules.screencapture
   name: com.unity.modules.screencapture
@@ -1094,7 +1201,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.terrain@1.0.0
   assetPath: Packages/com.unity.modules.terrain
   name: com.unity.modules.terrain
@@ -1150,7 +1257,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
   assetPath: Packages/com.unity.modules.terrainphysics
   name: com.unity.modules.terrainphysics
@@ -1214,7 +1321,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.tilemap@1.0.0
   assetPath: Packages/com.unity.modules.tilemap
   name: com.unity.modules.tilemap
@@ -1273,7 +1380,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.ui@1.0.0
   assetPath: Packages/com.unity.modules.ui
   name: com.unity.modules.ui
@@ -1329,7 +1436,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.uielements@1.0.0
   assetPath: Packages/com.unity.modules.uielements
   name: com.unity.modules.uielements
@@ -1397,7 +1504,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.umbra@1.0.0
   assetPath: Packages/com.unity.modules.umbra
   name: com.unity.modules.umbra
@@ -1453,7 +1560,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
   assetPath: Packages/com.unity.modules.unityanalytics
   name: com.unity.modules.unityanalytics
@@ -1517,7 +1624,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequest
   name: com.unity.modules.unitywebrequest
@@ -1573,7 +1680,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
   name: com.unity.modules.unitywebrequestassetbundle
@@ -1637,7 +1744,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestaudio
   name: com.unity.modules.unitywebrequestaudio
@@ -1701,7 +1808,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequesttexture
   name: com.unity.modules.unitywebrequesttexture
@@ -1765,7 +1872,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
   assetPath: Packages/com.unity.modules.unitywebrequestwww
   name: com.unity.modules.unitywebrequestwww
@@ -1845,7 +1952,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.vehicles@1.0.0
   assetPath: Packages/com.unity.modules.vehicles
   name: com.unity.modules.vehicles
@@ -1905,7 +2012,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.video@1.0.0
   assetPath: Packages/com.unity.modules.video
   name: com.unity.modules.video
@@ -1973,7 +2080,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.vr@1.0.0
   assetPath: Packages/com.unity.modules.vr
   name: com.unity.modules.vr
@@ -2043,7 +2150,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.wind@1.0.0
   assetPath: Packages/com.unity.modules.wind
   name: com.unity.modules.wind
@@ -2099,7 +2206,7 @@ m_ResolvedPackages:
   isDirectDependency: 1
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.xr@1.0.0
   assetPath: Packages/com.unity.modules.xr
   name: com.unity.modules.xr
@@ -2167,7 +2274,7 @@ m_ResolvedPackages:
   isDirectDependency: 0
   version: 1.0.0
   source: 2
-  resolvedPath: C:\Users\shrad\OneDrive\Documents\GitHub\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
     Rivals!\Library\PackageCache\com.unity.modules.subsystems@1.0.0
   assetPath: Packages/com.unity.modules.subsystems
   name: com.unity.modules.subsystems
@@ -2216,6 +2323,171 @@ m_ResolvedPackages:
     path: 
   unityLifecycle:
     version: 
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.unity.services.core@1.12.0
+  testable: 0
+  isDirectDependency: 0
+  version: 1.12.0
+  source: 1
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+    Rivals!\Library\PackageCache\com.unity.services.core@1.12.0
+  assetPath: Packages/com.unity.services.core
+  name: com.unity.services.core
+  displayName: Services Core
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: 
+  description: 'This package defines common components used by multiple Game Service
+    packages.
+
+    These are standardized and aim to unify the overall experience
+    of working with Game Services SDK.'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.1
+    - 1.1.0-pre.7
+    - 1.1.0-pre.8
+    - 1.1.0-pre.9
+    - 1.1.0-pre.10
+    - 1.1.0-pre.11
+    - 1.1.0-pre.41
+    - 1.1.0-pre.69
+    - 1.2.0
+    - 1.3.1
+    - 1.3.2
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.5.2
+    - 1.6.0
+    - 1.12.0
+    compatible:
+    - 1.12.0
+    recommended: 1.12.0
+    deprecated: []
+  dependencies:
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  resolvedDependencies:
+  - name: com.unity.modules.unitywebrequest
+    version: 1.0.0
+  - name: com.unity.nuget.newtonsoft-json
+    version: 3.2.1
+  - name: com.unity.modules.androidjni
+    version: 1.0.0
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.services.core@1.12/manual/index.html
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/operate-services-sdk.git
+    revision: bb79575fc5daa804c44378ca264da0927e0d89da
+    path: 
+  unityLifecycle:
+    version: 1.12.0
+    nextVersion: 
+    recommendedVersion: 
+    isDeprecated: 0
+    deprecationMessage: 
+  isDeprecated: 0
+  deprecationMessage: 
+- packageId: com.unity.nuget.newtonsoft-json@3.2.1
+  testable: 0
+  isDirectDependency: 0
+  version: 3.2.1
+  source: 1
+  resolvedPath: C:\Users\Spike Fu\Desktop\CSCI 526\Bomb-astic Rivals!\Git Repo\spring-2024-project-tuesday-dream-team-diva\Bomb-astic
+    Rivals!\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.2.1
+  assetPath: Packages/com.unity.nuget.newtonsoft-json
+  name: com.unity.nuget.newtonsoft-json
+  displayName: Newtonsoft Json
+  author:
+    name: 
+    email: 
+    url: 
+  category: 
+  type: library
+  description: 'Newtonsoft Json for use in Unity projects and Unity packages. Currently
+    synced to version 13.0.2.
+
+
+    This package is used for advanced json serialization
+    and deserialization. Most Unity users will be better suited using the existing
+    json tools built into Unity.
+
+    To avoid assembly clashes, please use this
+    package if you intend to use Newtonsoft Json.'
+  status: 0
+  errors: []
+  versions:
+    all:
+    - 1.0.0-preview.2
+    - 1.0.0-preview.3
+    - 1.0.0-preview.4
+    - 1.0.1-preview.1
+    - 1.1.2
+    - 2.0.0-preview
+    - 2.0.0-preview.1
+    - 2.0.0-preview.2
+    - 2.0.0
+    - 2.0.1-preview.1
+    - 2.0.2
+    - 3.0.1
+    - 3.0.2
+    - 3.2.1
+    compatible:
+    - 3.2.1
+    recommended: 3.2.1
+    deprecated: []
+  dependencies: []
+  resolvedDependencies: []
+  keywords: []
+  registry:
+    id: main
+    name: 
+    url: https://packages.unity.com
+    scopes: []
+    isDefault: 1
+    capabilities: 7
+    configSource: 0
+  hideInEditor: 1
+  isAssetStorePackage: 0
+  datePublishedTicks: 0
+  documentationUrl: 
+  hasRepository: 1
+  repository:
+    type: git
+    url: https://github.cds.internal.unity3d.com/unity/com.unity.nuget.newtonsoft-json.git
+    revision: d8e49aef8979bef617144382052ec2f479645eaf
+    path: 
+  unityLifecycle:
+    version: 3.2.1
     nextVersion: 
     recommendedVersion: 
     isDeprecated: 0
