@@ -10,6 +10,11 @@ public class TileInteractor : MonoBehaviour
     void Start()
     {
         hidden = true;
+        //add
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
         spriteRenderer.enabled = false;
     }
 
@@ -25,7 +30,8 @@ public class TileInteractor : MonoBehaviour
             // if it's a bomb tile, destroy what lands on it
             if(isBomb)
             {
-                if(other.CompareTag("Player") || other.gameObject.transform.parent.CompareTag("Player"))
+                //add other.gameObject.transform.parent != null &&
+                if (other.CompareTag("Player") || (other.gameObject.transform.parent != null && other.gameObject.transform.parent.CompareTag("Player")))
                 {
                     // move player back to starting position
                     other.gameObject.transform.position = new Vector3(0.0f, -3.5f, -198.5f);
@@ -40,10 +46,10 @@ public class TileInteractor : MonoBehaviour
 
                     //}
                 }
-                else if(other.gameObject.transform.parent.CompareTag("Player"))
-                {
-                    Debug.Log("this is happening");
-                }
+                //else if(other.gameObject.transform.parent.CompareTag("Player"))
+                //{
+                //    Debug.Log("this is happening");
+                //}
                 else
                 {
                     Destroy(other.gameObject);  
