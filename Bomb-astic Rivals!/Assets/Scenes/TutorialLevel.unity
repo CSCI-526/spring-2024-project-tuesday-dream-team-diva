@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4092,14 +4092,14 @@ RectTransform:
   - {fileID: 1922182699}
   - {fileID: 778686351}
   - {fileID: 1475407953}
+  - {fileID: 230315887}
+  - {fileID: 587002633}
+  - {fileID: 267786698}
   - {fileID: 205128635}
   - {fileID: 742825857}
   - {fileID: 133278176}
   - {fileID: 1912035267}
   - {fileID: 1826256776}
-  - {fileID: 230315887}
-  - {fileID: 587002633}
-  - {fileID: 267786698}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -5490,6 +5490,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 225724394271135678, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
+      propertyPath: m_TagString
+      value: endline
+      objectReference: {fileID: 0}
     - target: {fileID: 8072212652567389690, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
       propertyPath: endGameCanvas
       value: 
