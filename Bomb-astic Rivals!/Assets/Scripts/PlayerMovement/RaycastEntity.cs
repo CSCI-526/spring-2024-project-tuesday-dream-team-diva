@@ -9,7 +9,9 @@ public class RaycastEntity : MonoBehaviour
 
     public Transform currentObject;
 
-    void Update()
+    // Removed Update method
+
+    public void PerformRaycast()
     {
         Vector3 forward = transform.forward;
         Vector3 portPos = transform.position + offset;
@@ -17,7 +19,6 @@ public class RaycastEntity : MonoBehaviour
         if (Physics.Raycast(portPos, forward, out hit, raycastDistance))
         {
             Debug.DrawRay(portPos, forward * hit.distance, Color.green);
-            //fixed
             if (hit.collider.CompareTag("Player"))
             {
                 Debug.Log("Hit a player, ignoring...");
@@ -28,11 +29,11 @@ public class RaycastEntity : MonoBehaviour
                 Debug.Log("debug: " + hit.collider.gameObject.name);
                 currentObject = hit.transform;
             }
-            
+
         }
         else
         {
-            Debug.DrawRay(portPos, forward * raycastDistance, Color.green);
+            Debug.DrawRay(portPos, forward * raycastDistance, Color.red);
             currentObject = null;
         }
     }
@@ -41,6 +42,4 @@ public class RaycastEntity : MonoBehaviour
     {
         return currentObject;
     }
-
-
 }

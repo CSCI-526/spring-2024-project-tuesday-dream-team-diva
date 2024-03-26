@@ -9,7 +9,8 @@ public class RaycastEntity2 : MonoBehaviour
 
     public Transform currentObject;
 
-    void Update()
+    // Removed Update method
+    public void PerformRaycast2()
     {
         Vector3 forward = transform.forward;
         Vector3 portPos = transform.position + offset; ;

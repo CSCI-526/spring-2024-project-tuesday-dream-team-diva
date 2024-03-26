@@ -28,6 +28,7 @@ public class GraspingSystem2 : MonoBehaviour
             {
                 return;
             }
+            raycastEntity2.PerformRaycast2(); // new
             currentObject = raycastEntity2.GetCurrentObject();
             if (currentObject != null && !isHolding)
             {

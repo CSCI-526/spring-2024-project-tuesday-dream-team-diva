@@ -28,7 +28,9 @@ public class GraspingSystem : MonoBehaviour
             {
                 return;
             }
+            raycastEntity.PerformRaycast(); // new
             currentObject = raycastEntity.GetCurrentObject();
+            
             if (currentObject != null && !isHolding)
             {
                 Rigidbody rb = currentObject.GetComponent<Rigidbody>();
