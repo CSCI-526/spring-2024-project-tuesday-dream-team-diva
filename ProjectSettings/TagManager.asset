@@ -12,6 +12,9 @@ TagManager:
   - player2
   - endline
   - fallDetector
+  - tick
+  - hint1
+  - hint2
   layers:
   - Default
   - TransparentFX
