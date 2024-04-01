@@ -1,109 +1,64 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class GraspingSystem2 : MonoBehaviour
 {
     public Transform holdPos;
     public float throwForce = 10f;
-    public bool isHolding = false;
-    private Transform currentObject;
+    public GameObject currentHoldingObject = null;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!isHolding && ( other.gameObject.CompareTag("freeze") || other.gameObject.CompareTag("reducespeed") || other.gameObject.CompareTag("hide tile")))
+        if (currentHoldingObject == null)
         {
-            currentObject = other.transform;
+            if (other.gameObject.CompareTag("freeze") || other.gameObject.CompareTag("reducespeed") || other.gameObject.CompareTag("hide tile"))
+            {
+                GrabObject(other.gameObject);
+            }
         }
     }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.transform == currentObject && !isHolding)
-        {
-            Debug.Log("OnTriggerExit: Setting currentObject to null");
-            currentObject = null;
-        }
-    }
-
-    public void SetCurrentObject(Transform newObject)
-    {
-        if (newObject == null)
-        {
-            Debug.Log("SetCurrentObject: Setting currentObject to null");
-        }
-        else
-        {
-            Debug.Log($"SetCurrentObject: Setting currentObject to {newObject.name}");
-        }
-        currentObject = newObject;
-    }
-
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.U) && !isHolding && currentObject != null)
+        if (Input.GetKeyDown(KeyCode.U))
         {
-            GrabObject();
-            
-        }
-        else if (Input.GetKeyDown(KeyCode.Y) && isHolding)
-        {
-            ThrowObject();
-        }
-
-        if (isHolding && currentObject != null)
-        {
-            currentObject.position = holdPos.position;
+            if (currentHoldingObject != null)
+            {
+                ThrowObject();
+            }
         }
     }
 
-    private void GrabObject()
+    private void GrabObject(GameObject obj)
     {
-        Debug.Log($"Before grabbing, isHolding: {isHolding}");
-        Rigidbody rb = currentObject.GetComponent<Rigidbody>();
+        Rigidbody rb = obj.GetComponent<Rigidbody>();
         rb.useGravity = false;
-        rb.isKinematic = true; 
-        currentObject.position = holdPos.position;
-        currentObject.SetParent(holdPos);
-        isHolding = true;
-        Debug.Log($"after grabbing, isHolding: {isHolding}");
-    }
+        rb.isKinematic = true;
+        obj.transform.position = holdPos.position;
+        obj.transform.SetParent(holdPos);
 
+        currentHoldingObject = obj;
+    }
 
     private void ThrowObject()
     {
-        Debug.Log($"before throw, isHolding: {isHolding}");
 
-
-        if (currentObject == null)
+        if (currentHoldingObject == null)
         {
-            Debug.LogError("Attempt to throw a null object.");
-            isHolding = false; 
-            return; 
+            return;
         }
 
-        Rigidbody rb = currentObject.GetComponent<Rigidbody>();
+        Rigidbody rb = currentHoldingObject.GetComponent<Rigidbody>();
         if (rb == null)
         {
-            Debug.LogError("Rigidbody component not found on the object to throw.");
-            isHolding = false; 
-            return; 
-        }
-
-        if (holdPos == null)
-        {
-            Debug.LogError("holdPos has not been assigned.");
-            isHolding = false; 
-            return; 
+            return;
         }
 
         rb.useGravity = true;
         rb.isKinematic = false;
-        currentObject.SetParent(null);
-        rb.AddForce(holdPos.forward * throwForce, ForceMode.Impulse);
-        isHolding = false;
-        currentObject = null;
+        currentHoldingObject.transform.SetParent(null);
+        rb.AddForce(-holdPos.forward * throwForce, ForceMode.Impulse);
+
+        currentHoldingObject = null;
     }
-
-
-
 }

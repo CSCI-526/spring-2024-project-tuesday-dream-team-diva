@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement1 : MonoBehaviour
@@ -96,18 +97,25 @@ public class PlayerMovement1 : MonoBehaviour
     }
 
     //added by Rhea
-    private void OnTriggerEnter(Collider collison)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collison.CompareTag("freeze"))
+        Rigidbody otherRB = other.gameObject.GetComponent<Rigidbody>();
+        if(otherRB != null)
         {
-            freezing = true;
-            speed = 0.0f;
-        }
+            if(!Mathf.Approximately(otherRB.velocity.magnitude, 0))
+            {
+                if (other.CompareTag("freeze"))
+                {
+                    freezing = true;
+                    speed = 0.0f;
+                }
 
-        if (collison.CompareTag("reducespeed"))
-        {
-            decreasing = true;
-            speed = originalSpeed / 2.0f;
+                if (other.CompareTag("reducespeed"))
+                {
+                    decreasing = true;
+                    speed = originalSpeed / 2.0f;
+                }
+            }
         }
     }
 }
