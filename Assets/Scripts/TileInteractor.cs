@@ -7,6 +7,7 @@ public class TileInteractor : MonoBehaviour
     private bool hidden; // tracks whether or not the tile is showing it's value
     public SpriteRenderer spriteRenderer; // tracks image on tile
     public bool isBomb;
+    [SerializeField] private GameObject analyticsManager;
 
     public Vector3 startingPosition = new Vector3(0.0f, -3.5f, -198.5f);
 
@@ -19,6 +20,8 @@ public class TileInteractor : MonoBehaviour
             spriteRenderer = GetComponent<SpriteRenderer>();
         }
         spriteRenderer.enabled = false;
+
+        analyticsManager = GameObject.Find("Analytics Manager");
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,10 +41,28 @@ public class TileInteractor : MonoBehaviour
                 {
                     other.gameObject.SetActive(false);
 
+                    //send BombTriggeredByPlayer event
+                    analyticsManager.GetComponent<AnalyticsManager>().BombTriggeredByPlayer();
+
+                    //send LocationOfDeath event
+                    //define bombTileIdentifier
+                    GameObject tile = gameObject.transform.parent.gameObject;
+                    string tileName = tile.name;
+                    GameObject set = tile.transform.parent.gameObject;
+                    string setName = set.name;
+                    string bombTileIdentifier = setName + ": " + tileName;
+                    //define x and y coordinate
+                    float xAxis = tile.transform.position.x;
+                    float yAxis = tile.transform.position.y;
+                    //LocationOfDeath(bool isBombTile, string bombTileIdentifier, float xAxis, float yAxis)
+                    analyticsManager.GetComponent<AnalyticsManager>().LocationOfDeath(true, bombTileIdentifier, xAxis, yAxis);
+                    
                     StartCoroutine(RespawnCoroutine(other.gameObject));
                 }
                 else
                 {
+                    //send BombTriggeredByItem event
+                    analyticsManager.GetComponent<AnalyticsManager>().BombTriggeredByItem();
                     Destroy(other.gameObject);  
                 }
             }

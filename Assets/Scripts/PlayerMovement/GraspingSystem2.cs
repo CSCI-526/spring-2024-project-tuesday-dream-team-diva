@@ -6,6 +6,7 @@ public class GraspingSystem2 : MonoBehaviour
     public Transform holdPos;
     public float throwForce = 10f;
     public GameObject currentHoldingObject = null;
+    public GameObject analyticsManager;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -52,6 +53,21 @@ public class GraspingSystem2 : MonoBehaviour
         if (rb == null)
         {
             return;
+        }
+
+        if (currentHoldingObject.CompareTag("freeze"))
+        {
+            analyticsManager.GetComponent<AnalyticsManager>().BlueItemUsed();
+        }
+
+        if (currentHoldingObject.CompareTag("reducespeed"))
+        {
+            analyticsManager.GetComponent<AnalyticsManager>().RedItemUsed();
+        }
+
+        if (currentHoldingObject.CompareTag("hide tile"))
+        {
+            analyticsManager.GetComponent<AnalyticsManager>().BlackItemUsed();
         }
 
         rb.useGravity = true;

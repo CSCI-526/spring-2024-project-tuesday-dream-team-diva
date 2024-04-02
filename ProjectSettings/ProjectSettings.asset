@@ -742,7 +742,7 @@ PlayerSettings:
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  webGLDecompressionFallback: 0
+  webGLDecompressionFallback: 1
   webGLInitialMemorySize: 32
   webGLMaximumMemorySize: 2048
   webGLMemoryGrowthMode: 2
@@ -844,10 +844,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: ccfab75e-dade-4685-a2fc-ca1570c6e752
+  cloudProjectId: 165f1558-0bc4-42d1-9a53-49cdda31da39
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: spring-2024-project-tuesday-dream-team-diva
+  projectName: Bomb-astic Rivals!
   organizationId: meiwenfu
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
