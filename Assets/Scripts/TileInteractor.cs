@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Diagnostics;
 using UnityEngine;
 
 public class TileInteractor : MonoBehaviour
@@ -6,6 +7,8 @@ public class TileInteractor : MonoBehaviour
     private bool hidden; // tracks whether or not the tile is showing it's value
     public SpriteRenderer spriteRenderer; // tracks image on tile
     public bool isBomb;
+
+    public Vector3 startingPosition = new Vector3(0.0f, -3.5f, -198.5f);
 
     void Start()
     {
@@ -25,7 +28,7 @@ public class TileInteractor : MonoBehaviour
             spriteRenderer.enabled = true;
             hidden = false;
 
-            Debug.Log("SHOW TILE");
+            //Debug.Log("SHOW TILE");
 
             // if it's a bomb tile, destroy what lands on it
             if(isBomb)
@@ -33,23 +36,10 @@ public class TileInteractor : MonoBehaviour
                 //add other.gameObject.transform.parent != null &&
                 if (other.CompareTag("Player") || (other.gameObject.transform.parent != null && other.gameObject.transform.parent.CompareTag("Player")))
                 {
-                    // move player back to starting position
-                    other.gameObject.transform.position = new Vector3(0.0f, -3.5f, -198.5f);
+                    other.gameObject.SetActive(false);
 
-                    //// do scoring here?
-                    //if (other.gameObject.GetComponent<PlayerMovement1>()) // player one stepped on the bomb --> increase player two's score
-                    //{
-
-                    //}
-                    //else // player two stepped on the bomb --> increase player one's score
-                    //{
-
-                    //}
+                    StartCoroutine(RespawnCoroutine(other.gameObject));
                 }
-                //else if(other.gameObject.transform.parent.CompareTag("Player"))
-                //{
-                //    Debug.Log("this is happening");
-                //}
                 else
                 {
                     Destroy(other.gameObject);  
@@ -64,5 +54,15 @@ public class TileInteractor : MonoBehaviour
                 hidden = true;
             }
         }
+    }
+
+    IEnumerator RespawnCoroutine(GameObject respawningCharacter)
+    {
+        // Wait for 1.5 seconds
+        yield return new WaitForSeconds(1.5f);
+
+        // respawn character and make them movable again
+        respawningCharacter.transform.position = startingPosition;
+        respawningCharacter.SetActive(true);
     }
 }

@@ -5,8 +5,10 @@ public class PlayerMovement1 : MonoBehaviour
 {
     public static PlayerMovement1 instance;
 
+    public bool canMove = true;
+
     public float originalSpeed = 10f;
-    private float speed;
+    [SerializeField] private float speed;
     public float jumpHeight = 2.0f;
     private Rigidbody rb;
 
@@ -37,6 +39,7 @@ public class PlayerMovement1 : MonoBehaviour
 
     void Update()
     {
+        if (!canMove) return;
 
         Vector3 movement = Vector3.zero;
 
@@ -96,21 +99,20 @@ public class PlayerMovement1 : MonoBehaviour
         }
     }
 
-    //added by Rhea
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision other)
     {
         Rigidbody otherRB = other.gameObject.GetComponent<Rigidbody>();
-        if(otherRB != null)
+        if (otherRB != null)
         {
-            if(!Mathf.Approximately(otherRB.velocity.magnitude, 0))
+            if (!Mathf.Approximately(otherRB.velocity.magnitude, 0))
             {
-                if (other.CompareTag("freeze"))
+                if (other.gameObject.CompareTag("freeze"))
                 {
                     freezing = true;
                     speed = 0.0f;
                 }
 
-                if (other.CompareTag("reducespeed"))
+                if (other.gameObject.CompareTag("reducespeed"))
                 {
                     decreasing = true;
                     speed = originalSpeed / 2.0f;
