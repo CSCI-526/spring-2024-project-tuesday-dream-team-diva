@@ -58,8 +58,8 @@ public class TileInteractor : MonoBehaviour
 
     IEnumerator RespawnCoroutine(GameObject respawningCharacter)
     {
-        // Wait for 1.5 seconds
-        yield return new WaitForSeconds(1.5f);
+        // Wait for 2 seconds
+        yield return new WaitForSeconds(2);
 
         // respawn character and make them movable again
         respawningCharacter.transform.position = startingPosition;
