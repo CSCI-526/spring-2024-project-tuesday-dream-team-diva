@@ -37,7 +37,7 @@ public class AnalyticsManager : MonoBehaviour
         Debug.Log("Sent event redItemUsed Custom Event to Analytics");
         CustomEvent redItemUsed = new CustomEvent("redItemUsed")
         {
-            { "levelNumber", SceneManager.GetActiveScene().name}
+            { "levelName", SceneManager.GetActiveScene().name}
         };
 
         AnalyticsService.Instance.RecordEvent(redItemUsed);
@@ -48,7 +48,7 @@ public class AnalyticsManager : MonoBehaviour
         Debug.Log("Sent event blutItemUsed Custom Event to Analytics");
         CustomEvent blueItemUsed = new CustomEvent("blueItemUsed")
         {
-            { "levelNumber", SceneManager.GetActiveScene().name}
+            { "levelName", SceneManager.GetActiveScene().name}
         };
 
         AnalyticsService.Instance.RecordEvent(blueItemUsed);
@@ -59,7 +59,7 @@ public class AnalyticsManager : MonoBehaviour
         Debug.Log("Sent event blackItemUsed Custom Event to Analytics");
         CustomEvent blackItemUsed = new CustomEvent("blackItemUsed")
         {
-            { "levelNumber", SceneManager.GetActiveScene().name}
+            { "levelName", SceneManager.GetActiveScene().name}
         };
 
         AnalyticsService.Instance.RecordEvent(blackItemUsed);
@@ -70,7 +70,7 @@ public class AnalyticsManager : MonoBehaviour
         Debug.Log("Sent event bombTriggeredByPlayer Custom Event to Analytics");
         CustomEvent bombTriggeredByPlayer = new CustomEvent("bombTriggeredByPlayer")
         {
-            { "levelNumber", SceneManager.GetActiveScene().name}
+            { "levelName", SceneManager.GetActiveScene().name}
         };
 
         AnalyticsService.Instance.RecordEvent(bombTriggeredByPlayer);
@@ -81,7 +81,7 @@ public class AnalyticsManager : MonoBehaviour
         Debug.Log("Sent event bombTriggeredByItem Custom Event to Analytics");
         CustomEvent bombTriggeredByItem = new CustomEvent("bombTriggeredByItem")
         {
-            { "levelNumber", SceneManager.GetActiveScene().name}
+            { "levelName", SceneManager.GetActiveScene().name}
         };
 
         AnalyticsService.Instance.RecordEvent(bombTriggeredByItem);
@@ -92,7 +92,7 @@ public class AnalyticsManager : MonoBehaviour
         Debug.Log("Sent event locationOfDeath Custom Event to Analytics");
         CustomEvent locationOfDeath = new CustomEvent("locationOfDeath")
         {
-            { "levelNumber", SceneManager.GetActiveScene().name},
+            { "levelName", SceneManager.GetActiveScene().name},
             { "IsBombTile",  isBombTile},
             { "BombTileIdentifier", bombTileIdentifier },
             { "xAxis", xAxis},
