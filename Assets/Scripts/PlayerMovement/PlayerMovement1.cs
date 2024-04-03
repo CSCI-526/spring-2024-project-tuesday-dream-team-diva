@@ -41,6 +41,18 @@ public class PlayerMovement1 : MonoBehaviour
     {
         if (!canMove) return;
 
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(UIManager.instance.isPauseMenuActive)
+            {
+                UIManager.instance.TurnOffPauseControls();
+            }
+            else
+            {
+                UIManager.instance.TurnOnPauseControls();
+            }
+        }
+
         Vector3 movement = Vector3.zero;
 
         // forward

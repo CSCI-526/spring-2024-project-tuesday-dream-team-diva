@@ -20,6 +20,7 @@ public class EndGoalBehaviour2 : MonoBehaviour
             {
                 // display end game canvas
                 endGameCanvas1.SetActive(true);
+                Time.timeScale = 0.0f;
             }
         }
         
