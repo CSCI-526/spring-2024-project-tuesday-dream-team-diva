@@ -9,6 +9,10 @@ public class PlayerMovement1 : MonoBehaviour
 
     public float originalSpeed = 10f;
     [SerializeField] private float speed;
+
+    //added by Rhea
+    public float rotationSpeed = 10f;
+
     public float jumpHeight = 2.0f;
     private Rigidbody rb;
 
@@ -70,14 +74,18 @@ public class PlayerMovement1 : MonoBehaviour
         // left
         if (Input.GetKey(KeyCode.D))
         {
-            movement += transform.right;
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+            //movement += transform.right;
         }
 
         // right
         if (Input.GetKey(KeyCode.A))
         {
-            movement -= transform.right;
+            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
+            //movement -= transform.right;
         }
+
+    
 
         rb.MovePosition(transform.position + movement.normalized * speed * Time.deltaTime);
 
