@@ -8220,7 +8220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2162263269853855651, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: originalSpeed
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2162263269853855651, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: rotationSpeed
@@ -8761,7 +8761,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: originalSpeed
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: rotationSpeed
