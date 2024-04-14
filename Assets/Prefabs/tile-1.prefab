@@ -257,7 +257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 119abe8d990bf433b9dd63c15554c83c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
+  spriteRenderer: {fileID: 1237617588036896919}
   isBomb: 0
   analyticsManager: {fileID: 0}
   startingPosition: {x: 0, y: -3.5, z: -198.5}
