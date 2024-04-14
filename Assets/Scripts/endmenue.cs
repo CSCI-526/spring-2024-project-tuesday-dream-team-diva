@@ -17,16 +17,16 @@ public class endmenue : MonoBehaviour
     }
 
    public void loadtutorial1(){
-        SceneManager.LoadSceneAsync(2);
+        SceneManager.LoadScene(2);
         Time.timeScale = 1.0f;
     }
 
     public void loadtutorial2(){
-        SceneManager.LoadScene("Tutorial1-2");
+        SceneManager.LoadScene(3);
         Time.timeScale = 1.0f;
     }
     public void loadtutorial3(){
-        SceneManager.LoadScene("Tutorial1-3");
+        SceneManager.LoadScene(4);
         Time.timeScale = 1.0f;
     }
 
@@ -47,6 +47,11 @@ public class endmenue : MonoBehaviour
 
     public void loadlevel4(){
         SceneManager.LoadSceneAsync(8);
+        Time.timeScale = 1.0f;
+    }
+
+    public void loadtutorialscreen(){
+        SceneManager.LoadSceneAsync(9);
         Time.timeScale = 1.0f;
     }
 
