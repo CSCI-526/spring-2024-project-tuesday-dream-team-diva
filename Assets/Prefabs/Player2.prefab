@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7443243582401614573}
   - component: {fileID: 7469312286037560810}
   - component: {fileID: 1152730884001525705}
+  - component: {fileID: 4612582589542659093}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -83,6 +84,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4612582589542659093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70311318239130286}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3232386706139643482
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,8 +150,9 @@ GameObject:
   - component: {fileID: 2605889337192774551}
   - component: {fileID: 542743474899435022}
   - component: {fileID: 1486844896873397777}
-  - component: {fileID: 2150253638251877884}
-  - component: {fileID: 4717299724093198904}
+  - component: {fileID: 7013863200565492425}
+  - component: {fileID: 7651250138148689285}
+  - component: {fileID: 4395251592805847789}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -195,10 +218,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 1
-  originalSpeed: 40
+  originalSpeed: 7.5
   speed: 0
-  rotationSpeed: 10
-  jumpHeight: 8
+  rotationSpeed: 40
 --- !u!114 &2605889337192774551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +279,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 1.5, z: 1.25}
   m_Center: {x: 0, y: -0.5, z: 0.5}
---- !u!114 &2150253638251877884
+--- !u!65 &7013863200565492425
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287845348836016945}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3, z: 1}
+  m_Center: {x: 0.3, y: 0, z: 0}
+--- !u!114 &7651250138148689285
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Falldetector: {fileID: 0}
   analyticsManager: {fileID: 0}
---- !u!114 &4717299724093198904
+--- !u!114 &4395251592805847789
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -131,6 +131,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1498900516}
     m_Modifications:
+    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358290519960430751, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104970628588047503, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b63395597a65f496badf959c5bdee787, type: 3}
     - target: {fileID: 4058309432520184299, guid: a780bcfd74cb540189488225aa8be8f6, type: 3}
       propertyPath: m_Name
       value: tile-1 (4)
@@ -175,26 +195,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358290519960430751, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104970628588047503, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b63395597a65f496badf959c5bdee787, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3665,6 +3665,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1498900516}
     m_Modifications:
+    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 7358290519960430751, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9104970628588047503, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b63395597a65f496badf959c5bdee787, type: 3}
     - target: {fileID: 4058309432520184299, guid: a780bcfd74cb540189488225aa8be8f6, type: 3}
       propertyPath: m_Name
       value: tile-1 (5)
@@ -3709,26 +3729,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4885512603133961815, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 7358290519960430751, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9104970628588047503, guid: 8a6168e1bbd52472c867e027ab17070c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b63395597a65f496badf959c5bdee787, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4263,14 +4263,6 @@ PrefabInstance:
     - target: {fileID: 2110674607607074184, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2162263269853855651, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
-      propertyPath: originalSpeed
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 2162263269853855651, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
-      propertyPath: rotationSpeed
-      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3526025310510060294, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: analyticsManager
@@ -5130,14 +5122,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
-      propertyPath: originalSpeed
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
-      propertyPath: rotationSpeed
-      value: 40
-      objectReference: {fileID: 0}
     - target: {fileID: 2605889337192774551, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: analyticsManager
       value: 

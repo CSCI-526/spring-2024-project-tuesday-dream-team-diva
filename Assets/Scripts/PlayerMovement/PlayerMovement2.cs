@@ -45,6 +45,41 @@ public class PlayerMovement2 : MonoBehaviour
     {
         if (!canMove) return;
 
+        // jump
+        if (Input.GetKeyDown(KeyCode.N) && Mathf.Abs(rb.velocity.y) < 0.001f)
+        {
+            rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+        }
+
+        //added by Rhea
+        if (freezing)
+        {
+            freezeTimer += Time.deltaTime;
+            if (freezeTimer >= 5)
+            {
+                speed = originalSpeed;
+                freezeTimer = 0;
+                freezing = false;
+            }
+        }
+
+        if (decreasing)
+        {
+            decreaseTimer += Time.deltaTime;
+            if (decreaseTimer >= 5)
+            {
+                speed = originalSpeed;
+                decreaseTimer = 0;
+                decreasing = false;
+            }
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!canMove)
+            return;
+
         Vector3 movement = Vector3.zero;
 
         // forward
@@ -76,35 +111,6 @@ public class PlayerMovement2 : MonoBehaviour
         }
 
         rb.MovePosition(transform.position + movement.normalized * speed * Time.deltaTime);
-
-        // jump
-        if (Input.GetKeyDown(KeyCode.N) && Mathf.Abs(rb.velocity.y) < 0.001f)
-        {
-            rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
-        }
-
-        //added by Rhea
-        if (freezing)
-        {
-            freezeTimer += Time.deltaTime;
-            if (freezeTimer >= 5)
-            {
-                speed = originalSpeed;
-                freezeTimer = 0;
-                freezing = false;
-            }
-        }
-
-        if (decreasing)
-        {
-            decreaseTimer += Time.deltaTime;
-            if (decreaseTimer >= 5)
-            {
-                speed = originalSpeed;
-                decreaseTimer = 0;
-                decreasing = false;
-            }
-        }
     }
 
     private void OnCollisionEnter(Collision other)

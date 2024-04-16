@@ -57,38 +57,6 @@ public class PlayerMovement1 : MonoBehaviour
             }
         }
 
-        Vector3 movement = Vector3.zero;
-
-        // forward
-        if (Input.GetKey(KeyCode.W))
-        {
-            movement += transform.forward;
-        }
-
-        // backward
-        if (Input.GetKey(KeyCode.S))
-        {
-            movement -= transform.forward;
-        }
-
-        // left
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-            //movement += transform.right;
-        }
-
-        // right
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
-            //movement -= transform.right;
-        }
-
-    
-
-        rb.MovePosition(transform.position + movement.normalized * speed * Time.deltaTime);
-
         // jump
         if (Input.GetKeyDown(KeyCode.C) && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
@@ -117,6 +85,43 @@ public class PlayerMovement1 : MonoBehaviour
                 decreasing = false;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        if (!canMove)
+            return;
+
+        Vector3 movement = Vector3.zero;
+
+        // forward
+        if (Input.GetKey(KeyCode.W))
+        {
+            movement += transform.forward;
+        }
+
+        // backward
+        if (Input.GetKey(KeyCode.S))
+        {
+            movement -= transform.forward;
+        }
+
+        // left
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+            //movement += transform.right;
+        }
+
+        // right
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
+            //movement -= transform.right;
+        }
+
+
+        rb.MovePosition(transform.position + movement.normalized * speed * Time.deltaTime);
     }
 
     private void OnCollisionEnter(Collision other)
