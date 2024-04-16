@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class endmenue : MonoBehaviour
 {
    public void loadmainmenue(){
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadScene(0);
         Time.timeScale = 1.0f;
     }
 

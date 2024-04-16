@@ -8,7 +8,8 @@ public class MainManager : MonoBehaviour
 {
 
     public static MainManager Instance;
-    [SerializeField] private int enabledLevelNumber=0;
+
+    [SerializeField] private int enabledLevelNumber = 0;
     [SerializeField] private int currentLevelNumber;
     public GameObject tutorial;
     public GameObject level1;
@@ -29,6 +30,7 @@ public class MainManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
 
+        FindButtons();
         UpdateGameProgress();
         if (SceneManager.loadedSceneCount == 0)
         {
@@ -36,30 +38,61 @@ public class MainManager : MonoBehaviour
         }
     }
 
-    private void UpdateGameProgress()
+    public void FindButtons()
     {
-        int currentLevelNumber = SceneManager.loadedSceneCount;
-        if (currentLevelNumber <= 1)
+        if (SceneManager.GetActiveScene().name == "StartScreen")
+        {
+            if (tutorial == null)
+            {
+                tutorial = GameObject.Find("Canvas/Tutorial");
+            }
+
+            if (level1 == null)
+            {
+                level1 = GameObject.Find("Canvas/Level1");
+            }
+
+            if (level2 == null)
+            {
+                level2 = GameObject.Find("Canvas/Level2");
+            }
+
+            if (level3 == null)
+            {
+                level3 = GameObject.Find("Canvas/Level3");
+            }
+
+            if (level4 == null)
+            {
+                level4 = GameObject.Find("Canvas/Level4");
+            }
+        }
+    }
+
+    public void UpdateGameProgress()
+    {
+        int currentLevelNumber = SceneManager.GetActiveScene().buildIndex; // get the index of this scene in the build
+        if (currentLevelNumber <= 3 || currentLevelNumber == 9)
         {
             //enable tutorial
             enabledLevelNumber = 2;
         }
-        else if (currentLevelNumber == 2)
+        else if (currentLevelNumber == 4) // Tutorial-3
         {
             //enable level 1 
             enabledLevelNumber = 3;
         }
-        else if (currentLevelNumber == 3)
+        else if (currentLevelNumber == 5) // Level 1
         {
             //enable level 2 
             enabledLevelNumber = 4;
         }
-        else if (currentLevelNumber == 4)
+        else if (currentLevelNumber == 6) // level 2
         {
             //enable level 3 
             enabledLevelNumber = 5;
         }
-        else if(currentLevelNumber == 5)
+        else if(currentLevelNumber == 7) // level 3
         {
             //enable level 4 
             enabledLevelNumber = 6;
@@ -68,7 +101,6 @@ public class MainManager : MonoBehaviour
 
     public void SetSelectble()
     {
-        Debug.Log("Setting Selectable");
         if (enabledLevelNumber < 3) 
         { 
             level1.GetComponent<Button>().interactable = false;

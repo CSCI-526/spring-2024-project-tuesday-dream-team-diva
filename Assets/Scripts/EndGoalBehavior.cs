@@ -21,6 +21,11 @@ public class EndGoalBehavior : MonoBehaviour
                 // display end game canvas
                 endGameCanvas1.SetActive(true);
                 Time.timeScale = 0.0f;
+
+                if(MainManager.Instance != null)
+                {
+                    MainManager.Instance.UpdateGameProgress();
+                }
             }
         }
         
