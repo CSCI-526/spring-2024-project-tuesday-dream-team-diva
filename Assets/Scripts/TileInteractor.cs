@@ -7,6 +7,7 @@ public class TileInteractor : MonoBehaviour
     private bool hidden; // tracks whether or not the tile is showing it's value
     public SpriteRenderer spriteRenderer; // tracks image on tile
     public bool isBomb;
+    // private bool enterBomb = false;
     [SerializeField] private GameObject analyticsManager;
 
     public Vector3 startingPosition = new Vector3(0.0f, -3.5f, -198.5f);
@@ -22,6 +23,13 @@ public class TileInteractor : MonoBehaviour
         spriteRenderer.enabled = false;
 
         analyticsManager = GameObject.Find("Analytics Manager");
+
+        
+    }
+
+    void Update() 
+    {
+        
     }
 
     void OnTriggerEnter(Collider other)
@@ -39,6 +47,7 @@ public class TileInteractor : MonoBehaviour
                 //add other.gameObject.transform.parent != null &&
                 if (other.CompareTag("Player") || (other.gameObject.transform.parent != null && other.gameObject.transform.parent.CompareTag("Player")))
                 {
+                    
                     other.gameObject.SetActive(false);
 
                     //send BombTriggeredByPlayer event
@@ -75,6 +84,46 @@ public class TileInteractor : MonoBehaviour
                 hidden = true;
             }
         }
+        //by Julianna
+        if(hidden==false)
+        {
+            if(isBomb)
+            {
+                //add other.gameObject.transform.parent != null &&
+                if (other.CompareTag("Player") || (other.gameObject.transform.parent != null && other.gameObject.transform.parent.CompareTag("Player")))
+                {
+                    
+                    other.gameObject.SetActive(false);
+
+                    //send BombTriggeredByPlayer event
+                    analyticsManager.GetComponent<AnalyticsManager>().BombTriggeredByPlayer();
+
+                    //send LocationOfDeath event
+                    //define bombTileIdentifier
+                    GameObject tile = gameObject.transform.parent.gameObject;
+                    string tileName = tile.name;
+                    GameObject set = tile.transform.parent.gameObject;
+                    string setName = set.name;
+                    string bombTileIdentifier = setName + ": " + tileName;
+                    //define x and y coordinate
+                    float xAxis = tile.transform.position.x;
+                    float yAxis = tile.transform.position.y;
+                    //LocationOfDeath(bool isBombTile, string bombTileIdentifier, float xAxis, float yAxis)
+                    analyticsManager.GetComponent<AnalyticsManager>().LocationOfDeath(true, bombTileIdentifier, xAxis, yAxis);
+                    
+                    StartCoroutine(RespawnCoroutine(other.gameObject));
+                }
+                else
+                {
+                    //send BombTriggeredByItem event
+                    analyticsManager.GetComponent<AnalyticsManager>().BombTriggeredByItem();
+                    Destroy(other.gameObject);  
+                }
+            }
+
+        }
+        
+        
     }
 
     IEnumerator RespawnCoroutine(GameObject respawningCharacter)
