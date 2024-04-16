@@ -13,7 +13,7 @@ public class PlayerMovement2 : MonoBehaviour
     //added by Rhea
     public float rotationSpeed = 10f;
 
-    private float jumpHeight = 15.0f;
+    private float jumpHeight = 12.0f;
     private Rigidbody rb;
 
     //added by Rhea for freeze and reduce speed mechanic
