@@ -94,7 +94,7 @@ public class AnalyticsManager : MonoBehaviour
         {
             { "levelName", SceneManager.GetActiveScene().name},
             { "IsBombTile",  isBombTile},
-            { "BombTileIdentifier", bombTileIdentifier },
+            { "bombTileIdentifier", bombTileIdentifier },
             { "xAxis", xAxis},
             { "yAxis", yAxis}
         };
