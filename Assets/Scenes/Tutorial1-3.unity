@@ -5639,7 +5639,7 @@ PrefabInstance:
     - target: {fileID: 5946016730822660537, guid: a780bcfd74cb540189488225aa8be8f6, type: 3}
       propertyPath: spriteRenderer
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1119438770}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 991440289748453515, guid: a315b983ddf1948d094478974c337adf, type: 3}
@@ -5842,6 +5842,11 @@ CanvasRenderer:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1358264488863899275, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
   m_PrefabInstance: {fileID: 486184425}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &1119438770 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 1237617588036896919, guid: a780bcfd74cb540189488225aa8be8f6, type: 3}
+  m_PrefabInstance: {fileID: 942498751}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1124919496
 GameObject:
