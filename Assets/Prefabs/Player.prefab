@@ -225,9 +225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 1
-  originalSpeed: 7.5
+  originalSpeed: 5
   speed: 0
-  rotationSpeed: 40
+  rotationSpeed: 100
 --- !u!65 &6519583219192970528
 BoxCollider:
   m_ObjectHideFlags: 0

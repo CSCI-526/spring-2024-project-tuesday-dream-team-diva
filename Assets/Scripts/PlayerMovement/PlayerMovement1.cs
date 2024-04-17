@@ -110,14 +110,14 @@ public class PlayerMovement1 : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-            //movement += transform.right;
+            movement += transform.right;
         }
 
         // right
         if (Input.GetKey(KeyCode.A))
         {
             transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
-            //movement -= transform.right;
+            movement -= transform.right;
         }
 
 

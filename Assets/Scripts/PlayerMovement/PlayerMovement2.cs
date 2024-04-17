@@ -99,7 +99,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             //added by Rhea
             transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
-            //movement -= transform.right;
+            movement -= transform.right;
         }
 
         // right
@@ -107,7 +107,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             //added by Rhea
             transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-            //movement += transform.right;
+            movement += transform.right;
         }
 
         rb.MovePosition(transform.position + movement.normalized * speed * Time.deltaTime);

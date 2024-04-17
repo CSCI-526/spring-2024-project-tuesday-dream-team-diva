@@ -1,16 +1,9 @@
 ﻿<Properties StartupConfiguration="{837402B1-C708-8A03-D02B-22054BDBDAD7}|">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="77bde941-62e7-4499-9f8e-c396090951f1" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainManagerTrigger.cs">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f6d87048-4ed8-4ed7-8112-b70bcb6a7c81" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerMovement/PlayerMovement2.cs">
     <Files>
-      <File FileName="Assets/Scripts/Managers/MainManager.cs" Line="100" Column="1" />
-      <File FileName="Assets/Scripts/MainManagerTrigger.cs" Line="23" Column="1" />
-      <File FileName="Assets/Scripts/EndGoalBehavior.cs" Line="32" Column="1" />
-      <File FileName="Assets/Scripts/EndGoalBehaviour2.cs" Line="28" Column="18" />
-      <File FileName="Assets/Scripts/endmenue.cs" Line="10" Column="9" />
-      <File FileName="Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" Line="15" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement/PlayerMovement1.cs" Line="120" Column="13" />
+      <File FileName="Assets/Scripts/PlayerMovement/PlayerMovement2.cs" Line="110" Column="13" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,6 +12,7 @@
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
                 <Node name="Managers" expanded="True" />
+                <Node name="PlayerMovement" expanded="True" />
               </Node>
             </Node>
           </Node>
@@ -33,4 +27,7 @@
       <Breakpoint file="/Users/mina/Documents/GitHub/spring-2024-project-tuesday-dream-team-diva/Assets/Scripts/MainManagerTrigger.cs" relfile="Assets/Scripts/MainManagerTrigger.cs" line="15" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
 </Properties>
