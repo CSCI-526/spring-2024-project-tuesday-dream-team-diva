@@ -125,6 +125,7 @@ public class TileInteractor : MonoBehaviour
         
         
     }
+    
 
     IEnumerator RespawnCoroutine(GameObject respawningCharacter)
     {
