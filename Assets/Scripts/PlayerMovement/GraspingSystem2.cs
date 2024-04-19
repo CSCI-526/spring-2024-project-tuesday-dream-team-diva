@@ -7,6 +7,8 @@ public class GraspingSystem2 : MonoBehaviour
     public float throwForce = 10f;
     public GameObject currentHoldingObject = null;
     public GameObject analyticsManager;
+    public GameObject freezeactivate;
+    public GameObject hideactivate;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -16,6 +18,13 @@ public class GraspingSystem2 : MonoBehaviour
             {
                 GrabObject(other.gameObject);
             }
+            if(other.gameObject.CompareTag("freeze")){
+            freezeactivate.SetActive(true);
+        }
+
+        if(other.gameObject.CompareTag("hide tile")){
+            hideactivate.SetActive(true);
+        }
         }
     }
 
@@ -76,5 +85,7 @@ public class GraspingSystem2 : MonoBehaviour
         rb.AddForce(-holdPos.forward * throwForce, ForceMode.Impulse);
 
         currentHoldingObject = null;
+        freezeactivate.SetActive(false);
+        hideactivate.SetActive(false);
     }
 }

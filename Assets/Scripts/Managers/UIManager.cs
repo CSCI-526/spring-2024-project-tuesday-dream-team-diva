@@ -16,9 +16,13 @@ public class UIManager : MonoBehaviour
 
     public void TurnOnPauseControls()
     {
-        pauseControlsMenu.SetActive(true);
-        Time.timeScale = 0.0f;
-        isPauseMenuActive = true;
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            pauseControlsMenu.SetActive(true);
+            Time.timeScale = 0.0f;
+            isPauseMenuActive = true;
+
+        }
+        
     }
 
     public void TurnOffPauseControls()
