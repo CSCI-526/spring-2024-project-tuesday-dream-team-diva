@@ -19,8 +19,11 @@ public class PlayerMovement1 : MonoBehaviour
     //added by Rhea for freeze and reduce speed mechanic
     private float freezeTimer;
     private bool freezing;
+
+    /*
     private float decreaseTimer;
     private bool decreasing;
+    */
 
     void Awake()
     {
@@ -37,8 +40,10 @@ public class PlayerMovement1 : MonoBehaviour
         freezeTimer = 0;
         freezing = false;
 
+        /*
         decreaseTimer = 0;
         decreasing = false;
+        */
     }
 
     void Update()
@@ -67,7 +72,7 @@ public class PlayerMovement1 : MonoBehaviour
         if (freezing)
         {
             freezeTimer += Time.deltaTime;
-            if (freezeTimer >= 3)
+            if (freezeTimer >= 5)
             {
                 speed = originalSpeed;
                 freezeTimer = 0;
@@ -75,6 +80,7 @@ public class PlayerMovement1 : MonoBehaviour
             }
         }
 
+        /*
         if (decreasing)
         {
             decreaseTimer += Time.deltaTime;
@@ -84,7 +90,7 @@ public class PlayerMovement1 : MonoBehaviour
                 decreaseTimer = 0;
                 decreasing = false;
             }
-        }
+        } */
     }
 
     private void FixedUpdate()
@@ -137,11 +143,13 @@ public class PlayerMovement1 : MonoBehaviour
                     speed = 0.0f;
                 }
 
+                /*
                 if (other.gameObject.CompareTag("reducespeed"))
                 {
                     decreasing = true;
                     speed = originalSpeed / 2.0f;
                 }
+                */
             }
         }
     }
