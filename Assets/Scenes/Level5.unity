@@ -3473,7 +3473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16f06ff9e01548db8b2667ea1c15421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 3, z: 5}
+  positionOffset: {x: 0, y: 5, z: -5}
+  rotationOffset: {x: 30, y: 0, z: 0}
   player: {fileID: 1791570653}
 --- !u!81 &1475033192
 AudioListener:
@@ -4674,7 +4675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb47f283a78c41489bb121ee2a9e636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 3, z: 5}
+  positionOffset: {x: 0, y: 5, z: -5}
+  rotationOffset: {x: 30, y: 0, z: 0}
   player: {fileID: 1510705352}
 --- !u!81 &1837886478
 AudioListener:

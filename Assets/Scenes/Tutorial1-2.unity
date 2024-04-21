@@ -1560,6 +1560,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
+      propertyPath: respawnLocation.x
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
+      propertyPath: respawnLocation.y
+      value: -3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
+      propertyPath: respawnLocation.z
+      value: -198
+      objectReference: {fileID: 0}
     - target: {fileID: 2605889337192774551, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: analyticsManager
       value: 
@@ -1574,15 +1586,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6125191968357734887, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2
+      value: -5.5
       objectReference: {fileID: 0}
     - target: {fileID: 6125191968357734887, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -3.25
       objectReference: {fileID: 0}
     - target: {fileID: 6125191968357734887, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -198.5
+      value: -198
       objectReference: {fileID: 0}
     - target: {fileID: 6125191968357734887, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1665,7 +1677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16f06ff9e01548db8b2667ea1c15421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 3, z: 5}
+  offset: {x: 0, y: 5, z: 5}
   player: {fileID: 1741180958}
 --- !u!81 &452737297
 AudioListener:
@@ -2650,7 +2662,7 @@ Transform:
   m_GameObject: {fileID: 614927587}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: -5, z: -0.25600052}
+  m_LocalPosition: {x: 1.75, y: -5, z: -0.25600052}
   m_LocalScale: {x: 0.7500011, y: 0.4, z: 0.37500036}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5403,7 +5415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb47f283a78c41489bb121ee2a9e636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 0, y: 3, z: 5}
+  offset: {x: 0, y: 5, z: 5}
   player: {fileID: 886906410}
 --- !u!81 &1183597500
 AudioListener:
@@ -7415,15 +7427,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2110674607607074184, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 2110674607607074184, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3
+      value: -3.25
       objectReference: {fileID: 0}
     - target: {fileID: 2110674607607074184, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -198.5
+      value: -198
       objectReference: {fileID: 0}
     - target: {fileID: 2110674607607074184, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7452,6 +7464,18 @@ PrefabInstance:
     - target: {fileID: 2110674607607074184, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162263269853855651, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
+      propertyPath: respawnLocation.x
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162263269853855651, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
+      propertyPath: respawnLocation.y
+      value: -3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2162263269853855651, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
+      propertyPath: respawnLocation.z
+      value: -198
       objectReference: {fileID: 0}
     - target: {fileID: 3526025310510060294, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: analyticsManager
@@ -10578,7 +10602,7 @@ Transform:
   m_GameObject: {fileID: 2116728249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1, y: 5, z: -0.25099945}
+  m_LocalPosition: {x: 1.75, y: 5, z: -0.25099945}
   m_LocalScale: {x: 0.7500011, y: 0.3, z: 0.37500036}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10915,8 +10939,8 @@ SceneRoots:
   - {fileID: 170415835}
   - {fileID: 522922863}
   - {fileID: 1660759564}
-  - {fileID: 452737299}
   - {fileID: 1183597502}
+  - {fileID: 452737299}
   - {fileID: 1346661324}
   - {fileID: 377514429}
   - {fileID: 1665904576}

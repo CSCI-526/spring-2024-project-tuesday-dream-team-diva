@@ -25,6 +25,8 @@ public class PlayerMovement2 : MonoBehaviour
     private bool decreasing;
     */
 
+    public Vector3 respawnLocation;
+
     void Awake()
     {
         instance = this;
@@ -44,7 +46,9 @@ public class PlayerMovement2 : MonoBehaviour
         decreaseTimer = 0;
         decreasing = false;
         */
-}
+
+        respawnLocation = transform.position;
+    }
 
     void Update()
     {

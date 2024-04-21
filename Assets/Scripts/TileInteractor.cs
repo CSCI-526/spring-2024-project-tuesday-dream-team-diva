@@ -132,8 +132,20 @@ public class TileInteractor : MonoBehaviour
         // Wait for 2 seconds
         yield return new WaitForSeconds(2);
 
-        // respawn character and make them movable again
-        respawningCharacter.transform.position = startingPosition;
+        if(respawningCharacter.GetComponent<PlayerMovement1>())
+        {
+            PlayerMovement1.instance.transform.position = PlayerMovement1.instance.respawnLocation;
+        }
+        else if(respawningCharacter.GetComponent<PlayerMovement2>())
+        {
+            PlayerMovement2.instance.transform.position = PlayerMovement2.instance.respawnLocation;
+        }
+        else
+        {
+            // respawn character and make them movable again
+            respawningCharacter.transform.position = startingPosition;
+        }
+
         respawningCharacter.SetActive(true);
     }
 }

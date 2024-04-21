@@ -28,7 +28,18 @@ public class falldetection : MonoBehaviour
             //LocationOfDeath(bool isBombTile, string bombTileIdentifier, float xAxis, float yAxis)
             analyticsManager.GetComponent<AnalyticsManager>().LocationOfDeath(false, bombTileIdentifier, xAxis, yAxis);
             
-            transform.position = respawn;
+            if(gameObject.GetComponent<PlayerMovement1>())
+            {
+                PlayerMovement1.instance.transform.position = PlayerMovement1.instance.respawnLocation;
+            }
+            else if(gameObject.GetComponent<PlayerMovement2>())
+            {
+                PlayerMovement2.instance.transform.position = PlayerMovement2.instance.respawnLocation;
+            }
+            else
+            {
+                transform.position = respawn;
+            }
         }
     }
 
