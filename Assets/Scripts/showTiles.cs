@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class showTiles : MonoBehaviour
+public class showTiles1 : MonoBehaviour
 {
     public GameObject setTiles;
     public GraspingSystem holding;

@@ -79,15 +79,6 @@ public class TileInteractor : MonoBehaviour
         }
         else
         {
-            if(other.CompareTag("hide tile"))
-            {
-                spriteRenderer.enabled = false;
-                hidden = true;
-            }
-        }
-        //by Julianna
-        if(hidden==false)
-        {
             if(isBomb)
             {
                 //add other.gameObject.transform.parent != null &&
@@ -114,15 +105,14 @@ public class TileInteractor : MonoBehaviour
                     
                     StartCoroutine(RespawnCoroutine(other.gameObject));
                 }
-                else
-                {
-                    //send BombTriggeredByItem event
-                    analyticsManager.GetComponent<AnalyticsManager>().BombTriggeredByItem();
-                    Destroy(other.gameObject);  
-                }
             }
-
+            if(other.CompareTag("hide tile"))
+            {
+                spriteRenderer.enabled = false;
+                hidden = true;
+            }
         }
+        
         
         
     }
