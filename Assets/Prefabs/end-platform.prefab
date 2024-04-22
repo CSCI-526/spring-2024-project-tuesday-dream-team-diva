@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 752338427552784573}
   - component: {fileID: 2500045651769103660}
   - component: {fileID: 5708177104639142022}
-  - component: {fileID: 8072212652567389690}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -128,19 +127,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1.25}
   m_Center: {x: 0, y: 0, z: -0.1}
---- !u!114 &8072212652567389690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225724394271135678}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31f7b0c361ea94680a3e5cddd7d45f1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  endGameCanvas: {fileID: 0}
 --- !u!1 &8234605655282864350
 GameObject:
   m_ObjectHideFlags: 0
