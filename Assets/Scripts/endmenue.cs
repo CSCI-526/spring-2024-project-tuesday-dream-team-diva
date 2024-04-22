@@ -49,9 +49,13 @@ public class endmenue : MonoBehaviour
         SceneManager.LoadSceneAsync(8);
         Time.timeScale = 1.0f;
     }
+    public void loadlevel5() {
+        SceneManager.LoadSceneAsync(9);
+        Time.timeScale = 1.0f;
+    }
 
     public void loadtutorialscreen(){
-        SceneManager.LoadSceneAsync(9);
+        SceneManager.LoadSceneAsync(10);
         Time.timeScale = 1.0f;
     }
 

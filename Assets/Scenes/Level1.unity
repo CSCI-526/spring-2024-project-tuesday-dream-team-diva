@@ -1066,16 +1066,33 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 89430072}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4395251592805847789, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6287845348836016945, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 374729717}
   m_SourcePrefab: {fileID: 100100000, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
 --- !u!1 &374729716 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6287845348836016945, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
   m_PrefabInstance: {fileID: 374729715}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &374729717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374729716}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c892070e0eb1e4a84aa0bd29d23cf76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameCanvas1: {fileID: 1777081836}
 --- !u!1001 &408054308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1726,6 +1743,19 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1358264488863899275, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
   m_PrefabInstance: {fileID: 1601048478}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1495059823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495059822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c892070e0eb1e4a84aa0bd29d23cf76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endGameCanvas1: {fileID: 1537506908}
 --- !u!1 &1537506908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8471479613314098428, guid: 6bb8d200355fd4f6aa7713c8fa683fa0, type: 3}
@@ -1807,10 +1837,14 @@ PrefabInstance:
       propertyPath: analyticsManager
       value: 
       objectReference: {fileID: 89430072}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5746242112077389709, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1358264488863899275, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1495059823}
   m_SourcePrefab: {fileID: 100100000, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
 --- !u!1 &1654130035 stripped
 GameObject:

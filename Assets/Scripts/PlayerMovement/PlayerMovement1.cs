@@ -5,6 +5,8 @@ public class PlayerMovement1 : MonoBehaviour
 {
     public static PlayerMovement1 instance;
 
+    // public GameObject fake;
+
     public bool canMove = true;
 
     public float originalSpeed = 10f;
@@ -83,6 +85,13 @@ public class PlayerMovement1 : MonoBehaviour
                 freezing = false;
             }
         }
+
+        // if (fake.activeInHierarchy== true){
+        //     canMove=false;
+        // }
+        // else {
+        //     canMove=true;
+        // }
 
         /*
         if (decreasing)

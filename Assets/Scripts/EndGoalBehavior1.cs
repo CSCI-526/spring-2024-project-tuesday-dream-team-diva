@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndGoalBehaviour2 : MonoBehaviour
+public class EndGoalBehavior1 : MonoBehaviour
 {
     public GameObject endGameCanvas1;
     
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("endline"))
+        if(other.CompareTag("endline1"))
         {
             Debug.Log("Player reached the end goal!");
             
@@ -22,7 +22,7 @@ public class EndGoalBehaviour2 : MonoBehaviour
                 endGameCanvas1.SetActive(true);
                 Time.timeScale = 0.0f;
 
-                if (MainManager.Instance != null)
+                if(MainManager.Instance != null)
                 {
                     MainManager.Instance.UpdateGameProgress();
                 }

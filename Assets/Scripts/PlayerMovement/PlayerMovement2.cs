@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMovement2 : MonoBehaviour
 {
     public static PlayerMovement2 instance;
+    // public GameObject fake;
 
     public bool canMove = true;
 
@@ -71,6 +72,12 @@ public class PlayerMovement2 : MonoBehaviour
                 freezing = false;
             }
         }
+        // if (fake.activeInHierarchy== true){
+        //     canMove=false;
+        // }
+        // else {
+        //     canMove=true;
+        // }
 
         /*
         if (decreasing)

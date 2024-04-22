@@ -6,14 +6,17 @@ public class TriggerFakePlayer2 : MonoBehaviour
 {
     public GameObject fake;
     public Vector3 resetPosition = Vector3.zero; // Position to reset the fake GameObject
-    public float resetDelay = 5f; // Delay before resetting the fake position
+    public float resetDelay = 1f; // Delay before resetting the fake position
     private bool wasSpriteRendererEnabled = true;
     private bool activated = false;
     public Vector3[] waypoints;
-    public float speed = 3f;
+    public float speed = 5f;
 
     private int currentWaypointIndex = 0;
     private bool shouldMove = true;
+
+    public PlayerMovement1 player;
+      public GraspingSystem holding;
 
     void Start()
     {
@@ -21,11 +24,11 @@ public class TriggerFakePlayer2 : MonoBehaviour
         {
             new Vector3(-3.75f, -3.25f, -204.569f),
             new Vector3(-3.48f, -3.25f, -212.3647f),
-            new Vector3(0f, -3.25f, -210.7919f)
+            new Vector3(0f, -3.25f, -212.7919f)
         };
 
         fake.SetActive(false);
-        wasSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
+        // wasSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
 
         if (waypoints.Length == 0)
         {
@@ -35,24 +38,59 @@ public class TriggerFakePlayer2 : MonoBehaviour
 
     void Update()
     {
-        bool isSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
+        // fake.SetActive(false);
+        // bool isSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
+            if(player.gameObject.transform.position.z <-207 && holding.currentHoldingObject.CompareTag("hide tile")){
+            player.canMove=false;
+            // if (GetComponent<SpriteRenderer>().enabled == false){
+                // fake.SetActive(true);
+                Debug.Log("coroutine starts");
 
-        if (wasSpriteRendererEnabled && !isSpriteRendererEnabled && !activated)
-        {
-            // If SpriteRenderer was enabled and is now disabled for the first time
-            activated = true;
+            StartCoroutine(PresetMove());
+            // }
+            // if (wasSpriteRendererEnabled && !isSpriteRendererEnabled && !activated){
+            //     fake.SetActive(true);
 
-            // Start coroutine to reset fake position after a delay
-            StartCoroutine(ResetFakePositionAfterDelay());
+            // StartCoroutine(PresetMove());
+            // }
+            // fake.SetActive(true);
+
+            // StartCoroutine(PresetMove());
         }
+        else {
+            player.canMove = true;
+        }
+        //   bool isSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
+
+        // if (wasSpriteRendererEnabled && !isSpriteRendererEnabled && !activated)
+        // {
+            
+        //     // If SpriteRenderer was enabled and is now disabled for the first time
+        //     activated = true;
+        //     StartCoroutine(ResetFakePositionAfterDelay());
+     
+        //     // Start coroutine to reset fake position after a delay
+        //     // StartCoroutine(ResetFakePositionAfterDelay());
+        // }
+     
+       
+        //  else {
+        //     fake.SetActive(false);
+        // }
 
         // Update the state of the SpriteRenderer for the next frame
-        wasSpriteRendererEnabled = isSpriteRendererEnabled;
+        // wasSpriteRendererEnabled = isSpriteRendererEnabled;
     }
 
     IEnumerator ResetFakePositionAfterDelay()
     {
-        fake.SetActive(true);
+        // fake.SetActive(true);
+        if(holding.currentHoldingObject == null){
+            fake.SetActive(true);
+            Debug.Log("fake player set active");
+        }
+        // fake.SetActive(true);
+     
         yield return new WaitForSeconds(resetDelay);
 
         // After the delay, start moving the fake GameObject along the preset path
@@ -99,8 +137,9 @@ public class TriggerFakePlayer2 : MonoBehaviour
         yield return new WaitForSeconds(2f); // Adjust the delay as needed
 
         // Set the fake GameObject's position to its current position and deactivate it
-     
+    //  player.canMove =true;
         fake.SetActive(false);
+        // player.canMove =true;
         Debug.Log("Fake GameObject deactivated");
     }
 }

@@ -65,6 +65,16 @@ public class showTiles1 : MonoBehaviour
                 script.spriteRenderer.enabled = true;
                 script.hidden = false;
             }
+        }
+            if (other.CompareTag("freeze")){
+                setTiles.SetActive(true);
+                scripts = setTiles.GetComponentsInChildren<TileInteractor>();
+                foreach (TileInteractor script in scripts)
+            {
+                script.spriteRenderer.enabled = false;
+                script.hidden = true;
+            }
+            }
            
             //  foreach (TileInteractor script in scripts)
             // {
@@ -75,7 +85,7 @@ public class showTiles1 : MonoBehaviour
             //     spriteRenderer.enabled = true;
             // }
         
-        }
+        
         // if(other.CompareTag("hide tile"))
         //     {
         //         spriteRenderer.gameObject.enabled = false;

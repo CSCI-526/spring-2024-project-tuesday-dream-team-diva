@@ -21,7 +21,7 @@ public class TileInteractor : MonoBehaviour
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.enabled = false;
         }
-        // spriteRenderer.enabled = false;
+        spriteRenderer.enabled = false;
 
         analyticsManager = GameObject.Find("Analytics Manager");
 

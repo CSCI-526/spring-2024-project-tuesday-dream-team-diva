@@ -1,33 +1,38 @@
-
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class TriggerFakePlayer : MonoBehaviour
+public class triggerFakePlayerForTurorial3 : MonoBehaviour
 {
+    // Start is called before the first frame update
     public GameObject fake;
     public Vector3 resetPosition = Vector3.zero; // Position to reset the fake GameObject
     public float resetDelay = 1f; // Delay before resetting the fake position
     private bool wasSpriteRendererEnabled = true;
     private bool activated = false;
     public Vector3[] waypoints;
-    public float speed = 5f;
+    public float speed = 0.000000000000000000000000000000000000000000000001f;
 
     private int currentWaypointIndex = 0;
     private bool shouldMove = true;
     public PlayerMovement2 player;
+
     public GraspingSystem2 holding;
 
-    void Start()
+ void Start()
     {
         waypoints = new Vector3[]
         {
+            // new Vector3(-3.75f, -3.25f, -204.569f),
+            // new Vector3(-3.48f, -3.25f, -212.3647f),
+            // new Vector3(0f, -3.25f, -210.7919f)
             new Vector3(-53.75f, -3.25f, -204.569f),
-            new Vector3(-53.48f, -3.25f, -212.3647f),
-            new Vector3(-50f, -3.25f, -212.7919f)
+            new Vector3(-53.48f, -3.25f, -211.5f),
+            new Vector3(-50f, -3.25f, -211f)
         };
 
         fake.SetActive(false);
-        // wasSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
+        wasSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
 
         if (waypoints.Length == 0)
         {
@@ -37,65 +42,44 @@ public class TriggerFakePlayer : MonoBehaviour
 
     void Update()
     {
-        // fake.SetActive(false);
+        // // fake.SetActive(false);
         // bool isSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
-        //    if(player.gameObject.transform.position.z <-207 && holding.currentHoldingObject.CompareTag("hide tile")){
-        //     player.canMove=false;
-        // }
-        // else {
-        //     player.canMove = true;
-        // }
-        //        bool isSpriteRendererEnabled = GetComponent<SpriteRenderer>().enabled;
-
 
         // if (wasSpriteRendererEnabled && !isSpriteRendererEnabled && !activated)
         // {
         //     // If SpriteRenderer was enabled and is now disabled for the first time
         //     activated = true;
-     
-        //     StartCoroutine(ResetFakePositionAfterDelay());
-  
+
+            // Start coroutine to reset fake position after a delay
+
+                   if (holding.currentHoldingObject.CompareTag("freeze"))
+        {
+                        if(player.gameObject.transform.position.z <-207 && holding.currentHoldingObject.CompareTag("freeze")){
+            player.canMove=false;
+            StartCoroutine(ResetFakePositionAfterDelay());
+        }
+        else {
+            player.canMove=true;
+        }
+
+            
+        }
+            // StartCoroutine(ResetFakePositionAfterDelay());
         // }
-        // // else {
+        // //  else {
         // //     fake.SetActive(false);
         // // }
 
         // // Update the state of the SpriteRenderer for the next frame
         // wasSpriteRendererEnabled = isSpriteRendererEnabled;
-                 if(player.gameObject.transform.position.z <-207 && holding.currentHoldingObject.CompareTag("hide tile")){
-            player.canMove=false;
-            // if (GetComponent<SpriteRenderer>().enabled == false){
-                // fake.SetActive(true);
-                Debug.Log("coroutine starts");
-
-            StartCoroutine(PresetMove());
-            // }
-            // if (wasSpriteRendererEnabled && !isSpriteRendererEnabled && !activated){
-            //     fake.SetActive(true);
-
-            // StartCoroutine(PresetMove());
-            // }
-            // fake.SetActive(true);
-
-            // StartCoroutine(PresetMove());
-        }
-        else {
-            player.canMove = true;
-        }
     }
 
     IEnumerator ResetFakePositionAfterDelay()
     {
-               if(holding.currentHoldingObject == null){
-            fake.SetActive(true);
-            Debug.Log("fake player set active");
+        fake.SetActive(true);
+         if(player.gameObject.transform.position.z <-207){
+            player.canMove=false;
         }
-        //    if(player.gameObject.transform.position.z <-207 && holding.currentHoldingObject.CompareTag("hide tile")){
-        //     player.canMove=false;
-        // }
-        // else {
-        //     player.canMove = true;
-        // }
         yield return new WaitForSeconds(resetDelay);
 
         // After the delay, start moving the fake GameObject along the preset path
@@ -139,12 +123,12 @@ public class TriggerFakePlayer : MonoBehaviour
         fake.transform.position = currentPosition;
 
         // Wait for a specified duration
-        yield return new WaitForSeconds(1f); // Adjust the delay as needed
+        yield return new WaitForSeconds(2f); // Adjust the delay as needed
 
         // Set the fake GameObject's position to its current position and deactivate it
-    //   player.canMove = true;
-        fake.SetActive(false);
-       
+     player.canMove =true;
+        // fake.SetActive(false);
+        // player.canMove =true;
         Debug.Log("Fake GameObject deactivated");
     }
 }
