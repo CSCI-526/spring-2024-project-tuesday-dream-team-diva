@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TileInteractor : MonoBehaviour
 {
-    private bool hidden; // tracks whether or not the tile is showing it's value
+    public bool hidden; // tracks whether or not the tile is showing it's value
     public SpriteRenderer spriteRenderer; // tracks image on tile
     public bool isBomb;
     // private bool enterBomb = false;
@@ -19,8 +19,9 @@ public class TileInteractor : MonoBehaviour
         if (spriteRenderer == null)
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderer.enabled = false;
         }
-        spriteRenderer.enabled = false;
+        // spriteRenderer.enabled = false;
 
         analyticsManager = GameObject.Find("Analytics Manager");
 

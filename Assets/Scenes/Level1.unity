@@ -228,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eb47f283a78c41489bb121ee2a9e636, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionOffset: {x: 0, y: 5, z: -5}
+  rotationOffset: {x: 30, y: 0, z: 0}
   player: {fileID: 1495059822}
 --- !u!1001 &82311540
 PrefabInstance:
@@ -1526,7 +1528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1199954161
 Transform:
   m_ObjectHideFlags: 0
@@ -1578,6 +1580,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16f06ff9e01548db8b2667ea1c15421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  positionOffset: {x: 0, y: 5, z: -5}
+  rotationOffset: {x: 30, y: 0, z: 0}
   player: {fileID: 374729716}
 --- !u!81 &1386343840
 AudioListener:

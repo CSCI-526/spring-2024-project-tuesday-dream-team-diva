@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class followPlayer2 : MonoBehaviour
 {
-    public Vector3 positionOffset = new Vector3(0, 5,-5);
+    public Vector3 positionOffset = new Vector3(0, 5, -5);
     public Vector3 rotationOffset = new Vector3(30, 0, 0);
     public GameObject player;
     private float smoothSpeed = 0.125f;
