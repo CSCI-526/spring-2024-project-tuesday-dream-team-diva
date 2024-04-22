@@ -38,6 +38,24 @@ using UnityEngine;
 public class EndGoalBehavior2 : MonoBehaviour
 {
     public GameObject endGameCanvas1;
+    public EndGoalBehavior1 check;
+
+    public bool reached = false;
+     public GameObject nextLevels;
+
+
+  void Start(){
+        reached = false;
+    }
+
+    void Update () {
+        if (check != null && check.reached)
+    {
+        nextLevels.SetActive(true);
+        Time.timeScale = 0.0f;
+    }
+
+    }
     
 
     void OnTriggerEnter(Collider other)
@@ -47,13 +65,13 @@ public class EndGoalBehavior2 : MonoBehaviour
             Debug.Log("Player reached the end goal!");
             
             // stop time
-            
+            reached = true;
 
             if(endGameCanvas1)
             {
                 // display end game canvas
                 endGameCanvas1.SetActive(true);
-                Time.timeScale = 0.0f;
+                // Time.timeScale = 0.0f;
 
                 if(MainManager.Instance != null)
                 {
