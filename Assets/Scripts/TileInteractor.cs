@@ -5,6 +5,7 @@ using UnityEngine;
 public class TileInteractor : MonoBehaviour
 {
     public bool hidden; // tracks whether or not the tile is showing it's value
+    public bool reveal;
     public SpriteRenderer spriteRenderer; // tracks image on tile
     public bool isBomb;
     // private bool enterBomb = false;
@@ -15,13 +16,23 @@ public class TileInteractor : MonoBehaviour
     void Start()
     {
         hidden = true;
-        //add
+        
         if (spriteRenderer == null)
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.enabled = false;
         }
-        spriteRenderer.enabled = false;
+
+        //reveal the bomb on loaded if reveal is checked
+        if (!reveal)
+        {
+            spriteRenderer.enabled = false;
+        }
+        else
+        {
+            spriteRenderer.enabled = true;
+        }
+
 
         analyticsManager = GameObject.Find("Analytics Manager");
 
