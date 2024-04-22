@@ -2,7 +2,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class TriggerFakePlayer2 : MonoBehaviour
+public class TriggerFakePlayer : MonoBehaviour
 {
     public GameObject fake;
     public Vector3 resetPosition = Vector3.zero; // Position to reset the fake GameObject
@@ -19,9 +19,9 @@ public class TriggerFakePlayer2 : MonoBehaviour
     {
         waypoints = new Vector3[]
         {
-            new Vector3(-3.75f, -3.25f, -204.569f),
-            new Vector3(-3.48f, -3.25f, -212.3647f),
-            new Vector3(0f, -3.25f, -210.7919f)
+            new Vector3(-53.75f, -3.25f, -204.569f),
+            new Vector3(-53.48f, -3.25f, -212.3647f),
+            new Vector3(-50f, -3.25f, -210.7919f)
         };
 
         fake.SetActive(false);
