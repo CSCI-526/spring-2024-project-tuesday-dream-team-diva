@@ -10,22 +10,26 @@ public class GraspingSystem : MonoBehaviour
     public GameObject freezeactivate;
     public GameObject hideactivate;
 
+    public GameObject throwReticle;
+
     private void OnTriggerEnter(Collider other)
     {
-        if(currentHoldingObject == null)
+        if (currentHoldingObject == null)
         {
-            if(other.gameObject.CompareTag("freeze") || other.gameObject.CompareTag("reducespeed") || other.gameObject.CompareTag("hide tile"))
+            if (other.gameObject.CompareTag("freeze") || other.gameObject.CompareTag("reducespeed") || other.gameObject.CompareTag("hide tile"))
             {
                 GrabObject(other.gameObject);
             }
 
-            if(other.gameObject.CompareTag("freeze")){
-            freezeactivate.SetActive(true);
-        }
+            if (other.gameObject.CompareTag("freeze"))
+            {
+                freezeactivate.SetActive(true);
+            }
 
-        if(other.gameObject.CompareTag("hide tile")){
-            hideactivate.SetActive(true);
-        }
+            if (other.gameObject.CompareTag("hide tile"))
+            {
+                hideactivate.SetActive(true);
+            }
         }
     }
 
@@ -49,7 +53,11 @@ public class GraspingSystem : MonoBehaviour
         obj.transform.SetParent(holdPos);
 
         currentHoldingObject = obj;
-        
+
+        if(throwReticle)
+        {
+            throwReticle.SetActive(true);
+        }
     }
 
     private void ThrowObject()
@@ -89,5 +97,10 @@ public class GraspingSystem : MonoBehaviour
         currentHoldingObject = null;
         freezeactivate.SetActive(false);
         hideactivate.SetActive(false);
+
+        if (throwReticle)
+        {
+            throwReticle.SetActive(false);
+        }
     }
 }

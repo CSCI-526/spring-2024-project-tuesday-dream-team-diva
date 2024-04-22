@@ -10,17 +10,21 @@ public class EndGoalBehavior1 : MonoBehaviour
     public bool reached = false;
     public GameObject nextLevels;
 
-    void Start(){
+    void Start()
+    {
         reached = false;
     }
 
-    void Update() {
-      if (check != null && check.reached)
+    void Update()
     {
-        nextLevels.SetActive(true);
-        Time.timeScale = 0.0f;
-    }
-
+        if (check != null)
+        {
+            if (check.reached && reached)
+            {
+                nextLevels.SetActive(true);
+                Time.timeScale = 0.0f;
+            }
+        }
     }
     
 
@@ -33,6 +37,8 @@ public class EndGoalBehavior1 : MonoBehaviour
             // stop time
 
             reached = true;
+
+            PlayerMovement1.instance.canMove = false;
 
             if(endGameCanvas1)
             {

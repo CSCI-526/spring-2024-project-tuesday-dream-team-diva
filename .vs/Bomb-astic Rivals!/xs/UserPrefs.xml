@@ -1,8 +1,12 @@
 ﻿<Properties StartupConfiguration="{837402B1-C708-8A03-D02B-22054BDBDAD7}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Camera/followPlayer1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Camera/followPlayer2.cs">
     <Files>
-      <File FileName="Assets/Scripts/Camera/followPlayer1.cs" Line="12" Column="64" />
-      <File FileName="Assets/Scripts/Camera/followPlayer2.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerMovement/PlayerMovement1.cs" Line="50" Column="9" />
+      <File FileName="Assets/Scripts/PlayerMovement/PlayerMovement2.cs" Line="49" Column="1" />
+      <File FileName="Assets/Scripts/falldetection.cs" Line="41" Column="46" />
+      <File FileName="Assets/Scripts/TileInteractor.cs" Line="139" Column="68" />
+      <File FileName="Assets/Scripts/Camera/followPlayer1.cs" Line="7" Column="55" />
+      <File FileName="Assets/Scripts/Camera/followPlayer2.cs" Line="7" Column="55" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -20,7 +24,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Users/mina/Documents/GitHub/spring-2024-project-tuesday-dream-team-diva/Assets/Scripts/EndGoalBehaviour2.cs" relfile="Assets/Scripts/EndGoalBehaviour2.cs" line="27" column="1" />
@@ -28,7 +31,8 @@
       <Breakpoint file="/Users/mina/Documents/GitHub/spring-2024-project-tuesday-dream-team-diva/Assets/Scripts/MainManagerTrigger.cs" relfile="Assets/Scripts/MainManagerTrigger.cs" line="15" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="1ed90ec5-6399-4148-ab8d-e30bd96b7a55" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ed1cc4cf-83a7-4b78-9f56-c34e9e8b7688" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

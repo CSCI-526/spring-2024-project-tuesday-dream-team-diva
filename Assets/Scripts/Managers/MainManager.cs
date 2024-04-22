@@ -16,6 +16,7 @@ public class MainManager : MonoBehaviour
     public GameObject level2;
     public GameObject level3;
     public GameObject level4;
+    public GameObject level5;
 
     private void Awake()
     {
@@ -66,13 +67,18 @@ public class MainManager : MonoBehaviour
             {
                 level4 = GameObject.Find("Canvas/Level4");
             }
+
+            if(level5 == null)
+            {
+                level5 = GameObject.Find("Canvas/Level5");
+            }
         }
     }
 
     public void UpdateGameProgress()
     {
         int currentLevelNumber = SceneManager.GetActiveScene().buildIndex; // get the index of this scene in the build
-        if (currentLevelNumber <= 3 || currentLevelNumber == 9)
+        if (currentLevelNumber <= 3 || currentLevelNumber == 10)
         {
             //enable tutorial
             enabledLevelNumber = 2;
@@ -97,6 +103,11 @@ public class MainManager : MonoBehaviour
             //enable level 4 
             enabledLevelNumber = 6;
         }
+        else if(currentLevelNumber == 8) // level 4
+        {
+            // enable level 5
+            enabledLevelNumber = 7;
+        }
     }
 
     public void SetSelectble()
@@ -116,6 +127,10 @@ public class MainManager : MonoBehaviour
         if (enabledLevelNumber < 6)
         {
             level4.GetComponent<Button>().interactable = false;
+        }
+        if(enabledLevelNumber < 7)
+        {
+            level5.GetComponent<Button>().interactable = false;
         }
     }
 }

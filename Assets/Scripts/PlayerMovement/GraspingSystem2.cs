@@ -10,6 +10,8 @@ public class GraspingSystem2 : MonoBehaviour
     public GameObject freezeactivate;
     public GameObject hideactivate;
 
+    public GameObject throwReticle;
+
     private void OnTriggerEnter(Collider other)
     {
         if (currentHoldingObject == null)
@@ -48,6 +50,11 @@ public class GraspingSystem2 : MonoBehaviour
         obj.transform.SetParent(holdPos);
 
         currentHoldingObject = obj;
+
+        if(throwReticle)
+        {
+            throwReticle.SetActive(true);
+        }
     }
 
     private void ThrowObject()
@@ -87,5 +94,10 @@ public class GraspingSystem2 : MonoBehaviour
         currentHoldingObject = null;
         freezeactivate.SetActive(false);
         hideactivate.SetActive(false);
+
+        if(throwReticle)
+        {
+            throwReticle.SetActive(false);
+        }
     }
 }

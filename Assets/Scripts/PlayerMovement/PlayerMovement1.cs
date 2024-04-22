@@ -22,11 +22,6 @@ public class PlayerMovement1 : MonoBehaviour
     private float freezeTimer;
     private bool freezing;
 
-    /*
-    private float decreaseTimer;
-    private bool decreasing;
-    */
-
     public Vector3 respawnLocation;
 
     void Awake()
@@ -44,21 +39,14 @@ public class PlayerMovement1 : MonoBehaviour
         freezeTimer = 0;
         freezing = false;
 
-        /*
-        decreaseTimer = 0;
-        decreasing = false;
-        */
-
         respawnLocation = transform.position;
     }
 
     void Update()
     {
-        if (!canMove) return;
-
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if(UIManager.instance.isPauseMenuActive)
+            if (UIManager.instance.isPauseMenuActive)
             {
                 UIManager.instance.TurnOffPauseControls();
             }
@@ -67,6 +55,8 @@ public class PlayerMovement1 : MonoBehaviour
                 UIManager.instance.TurnOnPauseControls();
             }
         }
+
+        if (!canMove) return;
 
         // jump
         if (Input.GetKeyDown(KeyCode.C) && Mathf.Abs(rb.velocity.y) < 0.001f)
@@ -85,25 +75,6 @@ public class PlayerMovement1 : MonoBehaviour
                 freezing = false;
             }
         }
-
-        // if (fake.activeInHierarchy== true){
-        //     canMove=false;
-        // }
-        // else {
-        //     canMove=true;
-        // }
-
-        /*
-        if (decreasing)
-        {
-            decreaseTimer += Time.deltaTime;
-            if (decreaseTimer >= 5)
-            {
-                speed = originalSpeed;
-                decreaseTimer = 0;
-                decreasing = false;
-            }
-        } */
     }
 
     private void FixedUpdate()
@@ -155,14 +126,6 @@ public class PlayerMovement1 : MonoBehaviour
                     freezing = true;
                     speed = 0.0f;
                 }
-
-                /*
-                if (other.gameObject.CompareTag("reducespeed"))
-                {
-                    decreasing = true;
-                    speed = originalSpeed / 2.0f;
-                }
-                */
             }
         }
     }

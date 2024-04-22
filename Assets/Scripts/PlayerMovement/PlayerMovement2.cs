@@ -21,11 +21,6 @@ public class PlayerMovement2 : MonoBehaviour
     private float freezeTimer;
     private bool freezing;
 
-    /*
-    private float decreaseTimer;
-    private bool decreasing;
-    */
-
     public Vector3 respawnLocation;
 
     void Awake()
@@ -42,11 +37,6 @@ public class PlayerMovement2 : MonoBehaviour
         //added by Rhea
         freezeTimer = 0;
         freezing = false;
-
-        /*
-        decreaseTimer = 0;
-        decreasing = false;
-        */
 
         respawnLocation = transform.position;
     }
@@ -72,24 +62,6 @@ public class PlayerMovement2 : MonoBehaviour
                 freezing = false;
             }
         }
-        // if (fake.activeInHierarchy== true){
-        //     canMove=false;
-        // }
-        // else {
-        //     canMove=true;
-        // }
-
-        /*
-        if (decreasing)
-        {
-            decreaseTimer += Time.deltaTime;
-            if (decreaseTimer >= 5)
-            {
-                speed = originalSpeed;
-                decreaseTimer = 0;
-                decreasing = false;
-            }
-        } */
     }
 
     private void FixedUpdate()
@@ -142,14 +114,6 @@ public class PlayerMovement2 : MonoBehaviour
                     freezing = true;
                     speed = 0.0f;
                 }
-
-                /*
-                if (other.gameObject.CompareTag("reducespeed"))
-                {
-                    decreasing = true;
-                    speed = originalSpeed / 2.0f;
-                }
-                */
             }
         }
     }
