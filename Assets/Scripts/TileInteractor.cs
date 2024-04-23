@@ -11,7 +11,11 @@ public class TileInteractor : MonoBehaviour
     // private bool enterBomb = false;
     [SerializeField] private GameObject analyticsManager;
 
+
     public Vector3 startingPosition = new Vector3(0.0f, -3.5f, -198.5f);
+
+    //VFX
+    public ParticleSystem bombVFX;
 
     void Start()
     {
@@ -34,10 +38,8 @@ public class TileInteractor : MonoBehaviour
             hidden = false;
         }
 
-
         analyticsManager = GameObject.Find("Analytics Manager");
 
-        
     }
 
     void OnTriggerEnter(Collider other)
@@ -81,8 +83,10 @@ public class TileInteractor : MonoBehaviour
                 {
                     //send BombTriggeredByItem event
                     analyticsManager.GetComponent<AnalyticsManager>().BombTriggeredByItem();
-                    Destroy(other.gameObject);  
+                    Destroy(other.gameObject);
+                    bombVFX.Play();
                 }
+
             }
         }
         else
@@ -92,7 +96,8 @@ public class TileInteractor : MonoBehaviour
                 //add other.gameObject.transform.parent != null &&
                 if (other.CompareTag("Player"))
                 {
-                    
+                    bombVFX.Play();
+
                     other.gameObject.SetActive(false);
 
                     //send BombTriggeredByPlayer event
@@ -112,6 +117,7 @@ public class TileInteractor : MonoBehaviour
                     analyticsManager.GetComponent<AnalyticsManager>().LocationOfDeath(true, bombTileIdentifier, xAxis, yAxis);
                     
                     StartCoroutine(RespawnCoroutine(other.gameObject));
+
                 }
             }
 

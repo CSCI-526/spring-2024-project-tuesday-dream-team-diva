@@ -8,7 +8,6 @@ public class PlayerMovement1 : MonoBehaviour
     // public GameObject fake;
 
     public bool canMove = true;
-
     public float originalSpeed = 10f;
     [SerializeField] private float speed;
 
@@ -21,10 +20,13 @@ public class PlayerMovement1 : MonoBehaviour
     //added by Rhea for freeze and reduce speed mechanic
     private float freezeTimer;
     private float freezeImmuneTimer;
-    private bool freezing;
-    private bool freezeImmune;
+    public bool freezing;
+    public bool freezeImmune;
 
     public Vector3 respawnLocation;
+
+    //VFX
+    public GameObject freezeVFX;
 
     void Awake()
     {
@@ -42,6 +44,7 @@ public class PlayerMovement1 : MonoBehaviour
         freezeImmuneTimer = 0.0f;
         freezing = false;
         freezeImmune = false;
+        freezeVFX.SetActive(false);
 
         respawnLocation = transform.position;
     }
@@ -71,6 +74,7 @@ public class PlayerMovement1 : MonoBehaviour
                 speed = originalSpeed;
                 freezeTimer = 0;
                 freezing = false;
+                freezeVFX.SetActive(false);
                 freezeImmune = true;
             }
         }
@@ -142,6 +146,7 @@ public class PlayerMovement1 : MonoBehaviour
                 if (other.gameObject.CompareTag("freeze")&& !freezeImmune)
                 {
                     freezing = true;
+                    freezeVFX.SetActive(true);
                     speed = 0.0f;
                 }
             }
