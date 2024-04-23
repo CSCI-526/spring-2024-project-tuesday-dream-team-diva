@@ -8,65 +8,65 @@ public class endmenue : MonoBehaviour
 {
     public void loadmainmenue()
     {
-        SceneManager.LoadScene(0);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void aboutscreen()
     {
-        SceneManager.LoadSceneAsync(1);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void loadtutorial1()
     {
-        SceneManager.LoadSceneAsync(2);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(2);
     }
 
     public void loadtutorial2()
     {
-        SceneManager.LoadSceneAsync(3);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(3);
     }
     public void loadtutorial3()
     {
-        SceneManager.LoadSceneAsync(4);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(4);
     }
 
     public void loadlevel1()
     {
-        SceneManager.LoadSceneAsync(5);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(5);
     }
 
     public void loadlevel2()
     {
-        SceneManager.LoadSceneAsync(6);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(6);
     }
 
     public void loadlevel3()
     {
-        SceneManager.LoadSceneAsync(7);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(7);
     }
 
     public void loadlevel4()
     {
-        SceneManager.LoadSceneAsync(8);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(8);
     }
     public void loadlevel5()
     {
-        SceneManager.LoadSceneAsync(9);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(9);
     }
 
     public void loadtutorialscreen()
     {
-        SceneManager.LoadSceneAsync(10);
         Time.timeScale = 1.0f;
+        SceneManager.LoadSceneAsync(10);
     }
 }

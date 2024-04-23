@@ -22,7 +22,7 @@ public class EndGoalBehavior1 : MonoBehaviour
             if (check.reached && reached)
             {
                 nextLevels.SetActive(true);
-                Time.timeScale = 0.0f;
+                //Time.timeScale = 0.0f;
             }
         }
     }
@@ -38,13 +38,12 @@ public class EndGoalBehavior1 : MonoBehaviour
 
             reached = true;
 
-            PlayerMovement1.instance.canMove = false;
+            //PlayerMovement1.instance.canMove = false;
 
             if(endGameCanvas1)
             {
                 // display end game canvas
                 endGameCanvas1.SetActive(true);
-                // Time.timeScale = 0.0f;
 
                 if(MainManager.Instance != null)
                 {
