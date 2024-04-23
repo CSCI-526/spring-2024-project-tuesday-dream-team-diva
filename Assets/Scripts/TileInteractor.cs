@@ -40,6 +40,10 @@ public class TileInteractor : MonoBehaviour
 
         analyticsManager = GameObject.Find("Analytics Manager");
 
+        if(bombVFX != null)
+        {
+            bombVFX.Stop();
+        }
     }
 
     void OnTriggerEnter(Collider other)
