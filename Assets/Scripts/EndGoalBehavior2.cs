@@ -65,7 +65,7 @@ public class EndGoalBehavior2 : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("endline2"))
+        if(other.CompareTag("endline2")|| other.CompareTag("endline"))
         {
             Debug.Log("Player reached the end goal!");
             

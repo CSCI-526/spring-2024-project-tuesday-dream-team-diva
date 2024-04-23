@@ -31,6 +31,7 @@ public class TileInteractor : MonoBehaviour
         else
         {
             spriteRenderer.enabled = true;
+            hidden = false;
         }
 
 

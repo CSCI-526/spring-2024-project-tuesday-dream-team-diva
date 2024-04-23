@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10211,7 +10211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8234605655282864350, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
       propertyPath: m_TagString
-      value: endline2
+      value: endline
       objectReference: {fileID: 0}
     - target: {fileID: 8870598334360625799, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
       propertyPath: m_LocalScale.y
@@ -12103,10 +12103,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1358264488863899275, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
   m_PrefabInstance: {fileID: 1510136539}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1188901141 stripped
+--- !u!114 &1188901149
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5746242112077389709, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
-  m_PrefabInstance: {fileID: 1510136539}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188901140}
   m_Enabled: 1
@@ -12114,6 +12115,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31f7b0c361ea94680a3e5cddd7d45f1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGameCanvas1: {fileID: 1314277288}
+  check: {fileID: 1622264279}
+  reached: 0
+  nextLevels: {fileID: 1202843939}
 --- !u!4 &1190903228 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5384782585224710141, guid: a780bcfd74cb540189488225aa8be8f6, type: 3}
@@ -15387,7 +15392,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 225724394271135678, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
       propertyPath: m_TagString
-      value: endline1
+      value: endline
       objectReference: {fileID: 0}
     - target: {fileID: 8072212652567389690, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
       propertyPath: m_Enabled
@@ -15403,7 +15408,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8234605655282864350, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
       propertyPath: m_TagString
-      value: endline1
+      value: endline
       objectReference: {fileID: 0}
     - target: {fileID: 8870598334360625799, guid: a98badb95f3e44667ad69fdfb37a92e9, type: 3}
       propertyPath: m_LocalScale.y
@@ -15463,6 +15468,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 411308860720943752, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
+      propertyPath: endGameCanvas1
+      value: 
+      objectReference: {fileID: 1314277288}
     - target: {fileID: 519892387454606658, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: onetext1
       value: 
@@ -15574,7 +15583,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1358264488863899275, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1188901149}
   m_SourcePrefab: {fileID: 100100000, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
 --- !u!212 &1515557456 stripped
 SpriteRenderer:
@@ -16492,7 +16504,7 @@ PrefabInstance:
     - target: {fileID: 4395251592805847789, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: check
       value: 
-      objectReference: {fileID: 1188901141}
+      objectReference: {fileID: 1188901149}
     - target: {fileID: 4395251592805847789, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: nextLevels
       value: 
