@@ -20,6 +20,7 @@ public class PlayerMovement2 : MonoBehaviour
     //added by Rhea for freeze and reduce speed mechanic
     private float freezeTimer;
     private bool freezing;
+    private bool freezingImmune;
 
     public Vector3 respawnLocation;
 
@@ -37,6 +38,7 @@ public class PlayerMovement2 : MonoBehaviour
         //added by Rhea
         freezeTimer = 0;
         freezing = false;
+        freezingImmune = false;
 
         respawnLocation = transform.position;
     }
@@ -54,6 +56,11 @@ public class PlayerMovement2 : MonoBehaviour
                 speed = originalSpeed;
                 freezeTimer = 0;
                 freezing = false;
+            }
+
+            if (freezeTimer <= 7)
+            {
+                freezingImmune = true;
             }
         }
         else
@@ -74,31 +81,29 @@ public class PlayerMovement2 : MonoBehaviour
         Vector3 movement = Vector3.zero;
 
         // forward
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKey(KeyCode.I) && !freezing)
         {
             movement += transform.forward;
         }
 
         // backward
-        if (Input.GetKey(KeyCode.K))
+        if (Input.GetKey(KeyCode.K) && !freezing)
         {
             movement -= transform.forward;
         }
 
         // left
-        if (Input.GetKey(KeyCode.J))
+        if (Input.GetKey(KeyCode.L) && !freezing)
         {
-            //added by Rhea
-            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
-            movement -= transform.right;
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
+            movement += transform.right;
         }
 
         // right
-        if (Input.GetKey(KeyCode.L))
+        if (Input.GetKey(KeyCode.J) && !freezing)
         {
-            //added by Rhea
-            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
-            movement += transform.right;
+            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
+            movement -= transform.right;
         }
 
         rb.MovePosition(transform.position + movement.normalized * speed * Time.deltaTime);
@@ -111,7 +116,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             if (!Mathf.Approximately(otherRB.velocity.magnitude, 0))
             {
-                if (other.gameObject.CompareTag("freeze"))
+                if (other.gameObject.CompareTag("freeze") && !freezingImmune)
                 {
                     freezing = true;
                     speed = 0.0f;

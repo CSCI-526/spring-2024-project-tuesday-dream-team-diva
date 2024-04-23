@@ -21,6 +21,7 @@ public class PlayerMovement1 : MonoBehaviour
     //added by Rhea for freeze and reduce speed mechanic
     private float freezeTimer;
     private bool freezing;
+    private bool freezingImmune;
 
     public Vector3 respawnLocation;
 
@@ -36,8 +37,9 @@ public class PlayerMovement1 : MonoBehaviour
         speed = originalSpeed;
 
         //added by Rhea
-        freezeTimer = 0;
+        freezeTimer = 0.0f;
         freezing = false;
+        freezingImmune = false;
 
         respawnLocation = transform.position;
     }
@@ -68,6 +70,11 @@ public class PlayerMovement1 : MonoBehaviour
                 freezeTimer = 0;
                 freezing = false;
             }
+
+            if(freezeTimer <= 7)
+            {
+                freezingImmune = true;
+            }
         }
         else
         {
@@ -88,26 +95,26 @@ public class PlayerMovement1 : MonoBehaviour
         Vector3 movement = Vector3.zero;
 
         // forward
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.W) && !freezing)
         {
             movement += transform.forward;
         }
 
         // backward
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.S) && !freezing)
         {
             movement -= transform.forward;
         }
 
         // left
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.D) && !freezing)
         {
             transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
             movement += transform.right;
         }
 
         // right
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) && !freezing)
         {
             transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
             movement -= transform.right;
@@ -124,7 +131,7 @@ public class PlayerMovement1 : MonoBehaviour
         {
             if (!Mathf.Approximately(otherRB.velocity.magnitude, 0))
             {
-                if (other.gameObject.CompareTag("freeze"))
+                if (other.gameObject.CompareTag("freeze")&& !freezingImmune)
                 {
                     freezing = true;
                     speed = 0.0f;
