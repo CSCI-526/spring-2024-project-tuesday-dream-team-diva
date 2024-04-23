@@ -17,6 +17,7 @@ TagManager:
   - hint2
   - endline1
   - endline2
+  - Grabbing System
   layers:
   - Default
   - TransparentFX

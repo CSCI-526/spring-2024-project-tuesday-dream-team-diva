@@ -58,12 +58,6 @@ public class PlayerMovement1 : MonoBehaviour
 
         if (!canMove) return;
 
-        // jump
-        if (Input.GetKeyDown(KeyCode.C) && Mathf.Abs(rb.velocity.y) < 0.001f)
-        {
-            rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
-        }
-
         //added by Rhea
         if (freezing)
         {
@@ -74,6 +68,15 @@ public class PlayerMovement1 : MonoBehaviour
                 freezeTimer = 0;
                 freezing = false;
             }
+        }
+        else
+        {
+            // jump
+            if (Input.GetKeyDown(KeyCode.C) && Mathf.Abs(rb.velocity.y) < 0.001f)
+            {
+                rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            }
+
         }
     }
 

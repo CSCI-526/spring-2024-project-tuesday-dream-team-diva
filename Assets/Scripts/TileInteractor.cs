@@ -40,14 +40,10 @@ public class TileInteractor : MonoBehaviour
         
     }
 
-    void Update() 
-    {
-        
-    }
-
     void OnTriggerEnter(Collider other)
     {
-        if(hidden)
+        // show tile unless u collide with grabbing system
+        if(hidden && !other.CompareTag("Grabbing System"))
         {
             spriteRenderer.enabled = true;
             hidden = false;
@@ -58,7 +54,7 @@ public class TileInteractor : MonoBehaviour
             if(isBomb)
             {
                 //add other.gameObject.transform.parent != null &&
-                if (other.CompareTag("Player") || (other.gameObject.transform.parent != null && other.gameObject.transform.parent.CompareTag("Player")))
+                if (other.CompareTag("Player"))
                 {
                     
                     other.gameObject.SetActive(false);
@@ -91,10 +87,10 @@ public class TileInteractor : MonoBehaviour
         }
         else
         {
-            if(isBomb)
+            if(isBomb && !other.CompareTag("Grabbing System"))
             {
                 //add other.gameObject.transform.parent != null &&
-                if (other.CompareTag("Player") || (other.gameObject.transform.parent != null && other.gameObject.transform.parent.CompareTag("Player")))
+                if (other.CompareTag("Player"))
                 {
                     
                     other.gameObject.SetActive(false);
@@ -118,6 +114,7 @@ public class TileInteractor : MonoBehaviour
                     StartCoroutine(RespawnCoroutine(other.gameObject));
                 }
             }
+
             if(other.CompareTag("hide tile"))
             {
                 spriteRenderer.enabled = false;
