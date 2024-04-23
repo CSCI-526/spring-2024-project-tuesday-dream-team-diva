@@ -28,7 +28,6 @@ public class dropFreezeItem : MonoBehaviour
     {
         if (other.CompareTag("Player") && !alreadyTriggered)
         {
-            Debug.Log("Player Enters");
             rb.useGravity = true;
             rb.isKinematic = false;
             alreadyTriggered = true;

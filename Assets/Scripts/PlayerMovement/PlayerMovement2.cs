@@ -19,8 +19,9 @@ public class PlayerMovement2 : MonoBehaviour
 
     //added by Rhea for freeze and reduce speed mechanic
     private float freezeTimer;
+    private float freezeImmuneTimer;
     private bool freezing;
-    private bool freezingImmune;
+    private bool freezeImmune;
 
     public Vector3 respawnLocation;
 
@@ -36,9 +37,10 @@ public class PlayerMovement2 : MonoBehaviour
         speed = originalSpeed;
 
         //added by Rhea
-        freezeTimer = 0;
+        freezeTimer = 0.0f;
+        freezeImmuneTimer = 0.0f;
         freezing = false;
-        freezingImmune = false;
+        freezeImmune = false;
 
         respawnLocation = transform.position;
     }
@@ -56,13 +58,19 @@ public class PlayerMovement2 : MonoBehaviour
                 speed = originalSpeed;
                 freezeTimer = 0;
                 freezing = false;
-            }
-
-            if (freezeTimer <= 7)
-            {
-                freezingImmune = true;
+                freezeImmune = true;
             }
         }
+
+        if (freezeImmune)
+        {
+            freezeImmuneTimer += Time.deltaTime;
+            if (freezeImmuneTimer >= 2)
+            {
+                freezeImmune = false;
+            }
+        }
+
         else
         {
             // jump
@@ -116,7 +124,7 @@ public class PlayerMovement2 : MonoBehaviour
         {
             if (!Mathf.Approximately(otherRB.velocity.magnitude, 0))
             {
-                if (other.gameObject.CompareTag("freeze") && !freezingImmune)
+                if (other.gameObject.CompareTag("freeze") && !freezeImmune)
                 {
                     freezing = true;
                     speed = 0.0f;
