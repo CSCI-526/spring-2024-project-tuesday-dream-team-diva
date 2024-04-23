@@ -14541,7 +14541,7 @@ PrefabInstance:
     - target: {fileID: 5746242112077389709, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: check
       value: 
-      objectReference: {fileID: 1622264279}
+      objectReference: {fileID: 0}
     - target: {fileID: 5746242112077389709, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: nextLevels
       value: 
@@ -14550,6 +14550,10 @@ PrefabInstance:
       propertyPath: endGameCanvas1
       value: 
       objectReference: {fileID: 1314277288}
+    - target: {fileID: 5912716921223538402, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
+      propertyPath: analyticsManager
+      value: 
+      objectReference: {fileID: 551696515}
     - target: {fileID: 7683972139167053340, guid: ed399bfb8f88cbd45a1bedc3632cba35, type: 3}
       propertyPath: onetext1
       value: 
@@ -15344,6 +15348,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 660927005932142854, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
+      propertyPath: analyticsManager
+      value: 
+      objectReference: {fileID: 551696515}
     - target: {fileID: 1490059053947246126, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
       propertyPath: originalSpeed
       value: 8
@@ -15435,8 +15443,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6287845348836016945, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
-      insertIndex: 5
+      insertIndex: -1
       addedObject: {fileID: 1622264278}
+    - targetCorrespondingSourceObject: {fileID: 6287845348836016945, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1622264279}
   m_SourcePrefab: {fileID: 100100000, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
 --- !u!1 &1622264276 stripped
 GameObject:
@@ -15457,10 +15468,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Falldetector: {fileID: 1622264276}
   analyticsManager: {fileID: 551696515}
---- !u!114 &1622264279 stripped
+--- !u!114 &1622264279
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4395251592805847789, guid: 1d9ba2dc1e52849958d7bd6187c5ff7d, type: 3}
-  m_PrefabInstance: {fileID: 1616312131}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1622264276}
   m_Enabled: 1
@@ -15468,6 +15480,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b051a8bbd6730ba49a9a4951617ff434, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endGameCanvas1: {fileID: 790638766}
+  check: {fileID: 1188901149}
+  reached: 0
+  nextLevels: {fileID: 1385281899}
 --- !u!1001 &1629562998
 PrefabInstance:
   m_ObjectHideFlags: 0
