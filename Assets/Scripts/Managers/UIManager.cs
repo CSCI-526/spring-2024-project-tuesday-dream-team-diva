@@ -20,9 +20,7 @@ public class UIManager : MonoBehaviour
             pauseControlsMenu.SetActive(true);
             Time.timeScale = 0.0f;
             isPauseMenuActive = true;
-
-        }
-        
+        }   
     }
 
     public void TurnOffPauseControls()

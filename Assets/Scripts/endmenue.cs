@@ -6,57 +6,67 @@ using UnityEngine.UI;
 
 public class endmenue : MonoBehaviour
 {
-   public void loadmainmenue(){
+    public void loadmainmenue()
+    {
         SceneManager.LoadScene(0);
         Time.timeScale = 1.0f;
     }
 
-    public void aboutscreen(){
+    public void aboutscreen()
+    {
         SceneManager.LoadSceneAsync(1);
         Time.timeScale = 1.0f;
     }
 
-   public void loadtutorial1(){
-        SceneManager.LoadScene(2);
+    public void loadtutorial1()
+    {
+        SceneManager.LoadSceneAsync(2);
         Time.timeScale = 1.0f;
     }
 
-    public void loadtutorial2(){
-        SceneManager.LoadScene(3);
+    public void loadtutorial2()
+    {
+        SceneManager.LoadSceneAsync(3);
         Time.timeScale = 1.0f;
     }
-    public void loadtutorial3(){
-        SceneManager.LoadScene(4);
+    public void loadtutorial3()
+    {
+        SceneManager.LoadSceneAsync(4);
         Time.timeScale = 1.0f;
     }
 
-    public void loadlevel1(){
+    public void loadlevel1()
+    {
         SceneManager.LoadSceneAsync(5);
         Time.timeScale = 1.0f;
     }
 
-    public void loadlevel2(){
+    public void loadlevel2()
+    {
         SceneManager.LoadSceneAsync(6);
         Time.timeScale = 1.0f;
     }
 
-    public void loadlevel3(){
+    public void loadlevel3()
+    {
         SceneManager.LoadSceneAsync(7);
         Time.timeScale = 1.0f;
     }
 
-    public void loadlevel4(){
+    public void loadlevel4()
+    {
         SceneManager.LoadSceneAsync(8);
         Time.timeScale = 1.0f;
     }
-    public void loadlevel5() {
+    public void loadlevel5()
+    {
         SceneManager.LoadSceneAsync(9);
         Time.timeScale = 1.0f;
     }
 
-    public void loadtutorialscreen(){
+    public void loadtutorialscreen()
+    {
         SceneManager.LoadSceneAsync(10);
         Time.timeScale = 1.0f;
     }
-
 }
